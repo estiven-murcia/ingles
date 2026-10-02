@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------
-   1. SPANISH TEXTS
+   1. DICCIONARIOS DE IDIOMA
    ------------------------------------------------------------ */
 const ES = {
   "nav.home": "INICIO",
@@ -56,9 +56,6 @@ const ES = {
   "footer.note": "Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
 };
 
-/* ------------------------------------------------------------
-   2. ENGLISH TEXTS
-   ------------------------------------------------------------ */
 const EN = {
   "nav.home": "HOME",
   "nav.about": "ABOUT",
@@ -89,7 +86,7 @@ const EN = {
   "skill.teamwork": "Teamwork",
   "skill.problem": "Problem solving",
   "skill.english": "Technical English",
-  "resume.title": "Education and experience",
+  "resume.title": "Education and Experience",
   "resume.education": "Education",
   "resume.experience": "Experience",
   "edu.1.title": "Professional Technician in Web Programming",
@@ -115,7 +112,7 @@ const EN = {
 };
 
 /* ------------------------------------------------------------
-   3. CAMBIO DE IDIOMA
+   2. SISTEMA DE CAMBIO DE IDIOMA
    ------------------------------------------------------------ */
 const DICCIONARIOS = { es: ES, en: EN };
 let idiomaActual = "es";
@@ -124,6 +121,7 @@ function aplicarIdioma(idioma) {
   const textos = DICCIONARIOS[idioma];
   if (!textos) return;
 
+  // Traducir todos los elementos con la propiedad data-i18n
   document.querySelectorAll("[data-i18n]").forEach(elemento => {
     const clave = elemento.getAttribute("data-i18n");
     if (textos[clave] !== undefined) {
@@ -131,31 +129,51 @@ function aplicarIdioma(idioma) {
     }
   });
 
+  // Cambiar el atributo lang en la etiqueta html para accesibilidad
+  document.documentElement.lang = idioma;
   idiomaActual = idioma;
+
+  // Actualizar el estado visual del botón (ES / EN)
+  actualizarBotonIdioma();
 }
 
 function cambiarIdioma() {
-  aplicarIdioma(idiomaActual === "es" ? "en" : "es");
+  const nuevoIdioma = idiomaActual === "es" ? "en" : "es";
+  aplicarIdioma(nuevoIdioma);
+}
+
+function actualizarBotonIdioma() {
+  const btn = document.getElementById("btn-idioma");
+  if (!btn) return;
+
+  if (idiomaActual === "es") {
+    btn.innerHTML = `<span class="idioma-activo">ES</span><span class="idioma-sep">/</span><span class="idioma-inactivo">EN</span>`;
+  } else {
+    btn.innerHTML = `<span class="idioma-inactivo">ES</span><span class="idioma-sep">/</span><span class="idioma-activo">EN</span>`;
+  }
 }
 
 /* ------------------------------------------------------------
-   4. MENÚ RESPONSIVO
+   3. MENÚ RESPONSIVO
    ------------------------------------------------------------ */
 let menuVisible = false;
 
 function mostrarOcultarMenu() {
   const nav = document.getElementById("nav");
+  if (!nav) return;
   menuVisible = !menuVisible;
   nav.className = menuVisible ? "responsive" : "";
 }
 
 function cerrarMenu() {
-  document.getElementById("nav").className = "";
+  const nav = document.getElementById("nav");
+  if (!nav) return;
+  nav.className = "";
   menuVisible = false;
 }
 
 /* ------------------------------------------------------------
-   5. ANIMACIONES
+   4. ANIMACIONES
    ------------------------------------------------------------ */
 function animarHabilidades() {
   const barras = document.querySelectorAll(".progreso");
@@ -163,14 +181,16 @@ function animarHabilidades() {
     barra.style.width = "0%";
     setTimeout(() => {
       const porcentaje = barra.getAttribute("data-percent");
-      barra.style.width = porcentaje + "%";
+      if (porcentaje) {
+        barra.style.width = porcentaje + "%";
+      }
     }, 500);
   });
 }
 
 function activarAnimaciones() {
   const elementos = document.querySelectorAll(".contenido-seccion, .item, .skill, .tarjeta, .proyecto");
-  
+
   const observador = new IntersectionObserver((entradas) => {
     entradas.forEach(entrada => {
       if (entrada.isIntersecting) {
@@ -186,7 +206,7 @@ function activarAnimaciones() {
 }
 
 /* ------------------------------------------------------------
-   6. INICIALIZACIÓN
+   5. INICIALIZACIÓN
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   aplicarIdioma("es");
