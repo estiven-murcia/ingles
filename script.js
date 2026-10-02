@@ -1,58 +1,154 @@
 ==================================================
 
-1. STYLE.CSS - ANIMACIONES GENERALES
+/* ============================================================
+   ANIMACIONES DE HABILIDADES
+============================================================ */
 
-==================================================
+function animarHabilidades(){
 
-/* ELEMENTOS ANIMADOS */
+    const habilidades = document.querySelectorAll(".skill");
 
-.animacion-oculta{
 
-opacity:0;
+    const observador = new IntersectionObserver((entradas, obs)=>{
 
-transform:translateY(50px);
 
-transition:all 0.9s ease;
+        entradas.forEach(entrada=>{
+
+
+            if(entrada.isIntersecting){
+
+
+                const habilidad = entrada.target;
+
+
+                // Mostrar la habilidad
+                habilidad.classList.add("mostrar");
+
+
+                // Cargar barra de progreso
+                const barra = habilidad.querySelector(".progreso");
+
+
+                if(barra){
+
+                    const porcentaje = barra.getAttribute("data-percent");
+
+                    barra.style.width = porcentaje + "%";
+
+                }
+
+
+                // Evitar que vuelva a animar
+                obs.unobserve(habilidad);
+
+
+            }
+
+
+        });
+
+
+    },{
+
+        threshold:0.3
+
+    });
+
+
+
+    habilidades.forEach(habilidad=>{
+
+        observador.observe(habilidad);
+
+    });
+
 
 }
 
-.animacion-visible{
 
-opacity:1;
 
-transform:translateY(0);
+/* ============================================================
+   ANIMACIONES GENERALES DE LA PÁGINA
+============================================================ */
+
+
+function activarAnimaciones(){
+
+    const elementos = document.querySelectorAll(
+        ".contenido-seccion, .item, .skill, .tarjeta, .proyecto"
+    );
+
+
+    const observador = new IntersectionObserver((entradas, obs)=>{
+
+
+        entradas.forEach(entrada=>{
+
+
+            if(entrada.isIntersecting){
+
+
+                entrada.target.classList.add(
+                    "animacion-visible"
+                );
+
+
+                obs.unobserve(entrada.target);
+
+
+            }
+
+
+        });
+
+
+    },{
+
+        threshold:0.15
+
+    });
+
+
+
+    elementos.forEach(elemento=>{
+
+
+        elemento.classList.add(
+            "animacion-oculta"
+        );
+
+
+        observador.observe(elemento);
+
+
+    });
+
 
 }
 
-/* HABILIDADES */
 
-.skill{
 
-opacity:0;
+/* ============================================================
+   INICIO
+============================================================ */
 
-transform:translateY(40px);
 
-transition:all 0.8s ease;
+document.addEventListener("DOMContentLoaded",()=>{
 
-}
 
-.skill.mostrar{
+    // Mantiene el idioma español inicial
+    aplicarIdioma("es");
 
-opacity:1;
 
-transform:translateY(0);
+    // Animación de habilidades
+    animarHabilidades();
 
-}
 
-.progreso{
+    // Animación general de secciones
+    activarAnimaciones();
 
-width:0%;
 
-transition:width 2s ease-in-out;
-
-}
-
-==================================================
+});
 
 2. STYLE.CSS - ROBOT PROGRAMADOR
 
