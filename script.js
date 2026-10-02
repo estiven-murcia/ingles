@@ -1,112 +1,32 @@
-==================================================
-
-1. INDEX.HTML - AGREGAR ROBOT
+1. STYLE.CSS - AGREGAR AL FINAL DEL ARCHIVO
 
 ==================================================
 
-Ubicar antes de:
+/* ROBOT PROGRAMADOR ANIMADO */
 
-<script src="script.js"></script>
+.robot-programador{
 
-Agregar:
+    position: fixed;
 
-<div class="robot-programador">
+    bottom: 20px;
 
-    <div class="robot-cabeza">
+    left: -100px;
 
-        <div class="ojo"></div>
+    width: 70px;
 
-        <div class="ojo"></div>
+    height: 90px;
 
-    </div>
-
-    <div class="robot-cuerpo"></div>
-
-    <div class="robot-piernas">
-
-        <span></span>
-
-        <span></span>
-
-    </div>
-
-</div>
-
-==================================================
-
-2. STYLE.CSS - ANIMACIONES DE HABILIDADES
-
-==================================================
-
-.progreso {
-
-    width:0;
-
-    transition: width 1.8s ease-in-out;
-
-}
-
-.skill {
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:all 0.8s ease;
-
-}
-
-.skill.mostrar {
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-.progreso span {
-
-    transform:scale(0);
-
-    transition:transform 0.5s ease 1s;
-
-}
-
-.skill.mostrar .progreso span {
-
-    transform:scale(1);
-
-}
-
-==================================================
-
-3. STYLE.CSS - ROBOT PROGRAMADOR
-
-==================================================
-
-.robot-programador {
-
-    position:fixed;
-
-    bottom:25px;
-
-    left:-100px;
-
-    width:70px;
-
-    height:90px;
-
-    z-index:999;
+    z-index: 9999;
 
     animation:
 
-    caminar 18s linear infinite,
+    caminar 15s linear infinite,
 
     saltar 1s ease-in-out infinite;
 
 }
 
-.robot-cabeza {
+.robot-cabeza{
 
     width:60px;
 
@@ -122,11 +42,11 @@ Agregar:
 
     align-items:center;
 
-    gap:15px;
+    gap:12px;
 
 }
 
-.ojo {
+.ojo{
 
     width:10px;
 
@@ -138,7 +58,7 @@ Agregar:
 
 }
 
-.robot-cuerpo {
+.robot-cuerpo{
 
     width:50px;
 
@@ -152,7 +72,7 @@ Agregar:
 
 }
 
-.robot-piernas {
+.robot-piernas{
 
     display:flex;
 
@@ -162,7 +82,7 @@ Agregar:
 
 }
 
-.robot-piernas span {
+.robot-piernas span{
 
     width:10px;
 
@@ -172,79 +92,125 @@ Agregar:
 
 }
 
-@keyframes caminar {
+@keyframes caminar{
 
-0% {
+    0%{
 
-    left:-100px;
+        left:-100px;
+
+    }
+
+    50%{
+
+        left:90%;
+
+    }
+
+    100%{
+
+        left:-100px;
+
+    }
 
 }
 
-50% {
+@keyframes saltar{
 
-    left:90%;
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
 
 }
 
-100% {
+==================================================
 
-    left:-100px;
+2. STYLE.CSS - ANIMACIÓN HABILIDADES
+
+==================================================
+
+.skill{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all 0.8s ease;
 
 }
 
-}
+.skill.mostrar{
 
-@keyframes saltar {
-
-0%,100% {
+    opacity:1;
 
     transform:translateY(0);
 
 }
 
-50% {
+.progreso{
 
-    transform:translateY(-10px);
+    width:0;
 
-}
+    transition:width 1.8s ease-in-out;
 
 }
 
 ==================================================
 
-4. SCRIPT.JS
+3. SCRIPT.JS - REEMPLAZAR FUNCIÓN animarHabilidades()
 
 ==================================================
 
-Mantener:
+function animarHabilidades(){
 
-- Diccionario ES.
+const barras=document.querySelectorAll(".progreso");
 
-- Diccionario EN.
+const observador = new IntersectionObserver((entradas)=>{
 
-- Función cambiarIdioma().
+entradas.forEach(entrada=>{
 
-- Función aplicarIdioma().
+if(entrada.isIntersecting){
 
-- Función animarHabilidades().
+const barra=entrada.target;
 
-Agregar animación por desplazamiento:
+const porcentaje=barra.getAttribute("data-percent");
 
-function activarAnimaciones(){
+barra.style.width=porcentaje+"%";
 
-const elementos=document.querySelectorAll(
-
-".contenido-seccion, .skill, .interes, .item, .proyecto, .tarjeta"
-
-);
-
-elementos.forEach(elemento=>{
-
-elemento.classList.add("animacion-oculta");
+}
 
 });
 
-const observador=new IntersectionObserver((entradas,obs)=>{
+},{threshold:0.5});
+
+barras.forEach(barra=>{
+
+barra.style.width="0";
+
+observador.observe(barra);
+
+});
+
+}
+
+==================================================
+
+4. SCRIPT.JS - FUNCIÓN PARA ANIMACIONES DE ENTRADA
+
+==================================================
+
+function activarAnimaciones(){
+
+const elementos=document.querySelectorAll(".skill");
+
+const observador = new IntersectionObserver((entradas)=>{
 
 entradas.forEach(entrada=>{
 
@@ -252,13 +218,11 @@ if(entrada.isIntersecting){
 
 entrada.target.classList.add("mostrar");
 
-obs.unobserve(entrada.target);
-
 }
 
 });
 
-},{threshold:0.15});
+},{threshold:0.2});
 
 elementos.forEach(elemento=>{
 
@@ -267,46 +231,3 @@ observador.observe(elemento);
 });
 
 }
-
-==================================================
-
-5. ESTADO FINAL DEL PORTAFOLIO
-
-==================================================
-
-Nombre:
-
-Estiven Murcia
-
-Formación:
-
-Técnico Profesional en Programación Web
-
-UniEspinal
-
-Tecnologías:
-
-HTML
-
-CSS
-
-JavaScript
-
-Java
-
-Bases de datos
-
-Redes:
-
-GitHub:
-
-https://github.com/estiven-murcia
-
-LinkedIn:
-
-Perfil profesional
-
-Correo:
-
-estiven42@itfip.edu.co
-
