@@ -1,257 +1,349 @@
-const ES = {
+<!DOCTYPE html>
 
-"nav.home":"INICIO",
+<html lang="es">
 
-"nav.about":"SOBRE MÍ",
+<head>
 
-"nav.skills":"HABILIDADES",
+<meta charset="UTF-8">
 
-"nav.resume":"FORMACIÓN",
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-"nav.portfolio":"PROYECTOS",
+<title>Estiven Murcia · Web Developer</title>
 
-"nav.contact":"CONTACTO",
+<meta name="description" content="Estiven Murcia - Técnico Profesional en Programación Web.">
 
-"hero.role":"Técnico Profesional en Programación Web · Desarrollador Web Junior",
+<link rel="stylesheet" href="style.css">
 
-"about.title":"Sobre Mí",
+</head>
 
-"about.text":"Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal. Tengo conocimientos básicos en HTML, JavaScript y Java, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente busco fortalecer mis habilidades en programación y participar en proyectos tecnológicos.",
+<body>
 
-"about.infoTitle":"Información",
+<div class="contenedor-header">
 
-"about.labelLocation":"Ubicación",
+<header>
 
-"about.valueLocation":"Espinal, Tolima, Colombia",
+<div class="logo">
 
-"about.labelEmail":"Correo",
+<a href="#inicio">estiven</a>
 
-"about.labelLanguages":"Idiomas",
+</div>
 
-"about.valueLanguages":"Español (nativo) · Inglés básico",
+<nav id="nav">
 
-"about.labelStatus":"Disponibilidad",
+<ul>
 
-"about.valueStatus":"Abierto a prácticas",
+<li><a href="#inicio">INICIO</a></li>
 
-"about.interestsTitle":"Intereses",
+<li><a href="#sobremi">SOBRE MÍ</a></li>
 
-"interest.1":"CÓDIGO",
+<li><a href="#skills">SKILLS</a></li>
 
-"interest.2":"DESARROLLO WEB",
+<li><a href="#curriculum">FORMACIÓN</a></li>
 
-"interest.3":"TECNOLOGÍA",
+<li><a href="#portfolio">PROYECTOS</a></li>
 
-"interest.4":"APRENDIZAJE",
+<li><a href="#contacto">CONTACTO</a></li>
 
-"skills.title":"Habilidades",
+</ul>
 
-"skills.technical":"Habilidades técnicas",
+</nav>
 
-"skills.professional":"Habilidades profesionales",
+</header>
 
-"skill.support":"Soporte al usuario",
+</div>
 
-"skill.teamwork":"Trabajo en equipo",
+<section id="inicio" class="inicio">
 
-"skill.problem":"Resolución de problemas",
+<div class="contenido-banner">
 
-"skill.english":"Inglés técnico",
+<div class="contenedor-img">
 
-"resume.title":"Formación y experiencia",
+<img src="images/profile.jpg" alt="Foto de perfil">
 
-"resume.education":"Formación",
+</div>
 
-"resume.experience":"Experiencia",
+<h1>Estiven Murcia</h1>
 
-"edu.1.title":"Técnico Profesional en Programación Web",
+<h2>Técnico Profesional en Programación Web · Desarrollador Web Junior</h2>
 
-"edu.1.text":"Formación en fundamentos de programación, desarrollo web y creación de páginas utilizando HTML, JavaScript y Java.",
+<div class="redes">
 
-"edu.2.title":"Fundamentos de Desarrollo Web",
+<a href="#"><i class="fa-brands fa-github"></i></a>
 
-"edu.2.text":"Aprendizaje de estructuras web, lógica de programación y herramientas digitales.",
+<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
 
-"exp.1.title":"Desarrollo de proyectos académicos web",
+<a href="mailto:estiven42@itfip.edu.co"><i class="fa-solid fa-envelope"></i></a>
 
-"exp.1.text":"Participación en proyectos académicos aplicando conocimientos de HTML, JavaScript y Java para crear soluciones digitales.",
+</div>
 
-"exp.2.title":"Práctica personal de programación",
+</div>
 
-"exp.2.text":"Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.",
+</section>
 
-"portfolio.title":"Proyectos",
+<section id="sobremi" class="sobremi">
 
-"project.1.title":"Proyecto Web Académico",
+<div class="contenido-seccion">
 
-"project.1.text":"HTML, CSS y JavaScript",
+<h2>Sobre Mí</h2>
 
-"project.2.title":"Aplicación Básica en Java",
+<p>
 
-"project.2.text":"Java y lógica de programación",
+Soy estudiante de Técnico Profesional en Programación Web en UniEspinal,
 
-"project.3.title":"Prácticas de Desarrollo Web",
+con interés en el desarrollo de soluciones digitales y la tecnología.
 
-"project.3.text":"Diseño web y tecnologías digitales",
+Cuento con conocimientos básicos en HTML, JavaScript y Java, fortaleciendo
 
-"contact.title":"Contacto",
+constantemente mis habilidades en programación y desarrollo web.
 
-"contact.intro":"Si tienes un proyecto o deseas conocer más sobre mi perfil, puedes contactarme.",
+</p>
 
-"contact.emailLabel":"Correo",
+<div class="fila">
 
-"contact.linkedinValue":"Perfil profesional",
+<div class="col">
 
-"footer.note":"Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
+<h3>Información</h3>
 
-};
+<ul class="datos">
 
-const EN = {
+<li><strong>Ubicación</strong><span>Espinal, Tolima, Colombia</span></li>
 
-"nav.home":"HOME",
+<li><strong>Correo</strong><span>estiven42@itfip.edu.co</span></li>
 
-"nav.about":"ABOUT",
+<li><strong>Idiomas</strong><span>Español · Inglés básico</span></li>
 
-"nav.skills":"SKILLS",
+<li><strong>Disponibilidad</strong><span class="destacado">Abierto a prácticas</span></li>
 
-"nav.resume":"RESUME",
+</ul>
 
-"nav.portfolio":"PROJECTS",
+</div>
 
-"nav.contact":"CONTACT",
+<div class="col">
 
-"hero.role":"Professional Technician in Web Programming · Junior Web Developer",
+<h3>Intereses</h3>
 
-"about.title":"About Me",
+<div class="contenedor-intereses">
 
-"about.text":"I am a student of Professional Technician in Web Programming at UniEspinal. I have basic knowledge of HTML, JavaScript and Java, with interest in web development and digital solutions. I am currently improving my programming skills and looking for opportunities to participate in technology projects.",
+<div class="interes"><span>CÓDIGO</span></div>
 
-"about.infoTitle":"Information",
+<div class="interes"><span>DESARROLLO WEB</span></div>
 
-"about.labelLocation":"Location",
+<div class="interes"><span>TECNOLOGÍA</span></div>
 
-"about.valueLocation":"Espinal, Tolima, Colombia",
+<div class="interes"><span>APRENDIZAJE</span></div>
 
-"about.labelEmail":"Email",
+</div>
 
-"about.labelLanguages":"Languages",
+</div>
 
-"about.valueLanguages":"Spanish (native) · Basic English",
+</div>
 
-"about.labelStatus":"Availability",
+</div>
 
-"about.valueStatus":"Open to internships",
+</section>
 
-"about.interestsTitle":"Interests",
+<section id="skills" class="skills">
 
-"interest.1":"CODE",
+<div class="contenido-seccion">
 
-"interest.2":"WEB DEVELOPMENT",
+<h2>Habilidades</h2>
 
-"interest.3":"TECHNOLOGY",
+<div class="fila">
 
-"interest.4":"LEARNING",
+<div class="col">
 
-"skills.title":"Skills",
+<h3>Habilidades técnicas</h3>
 
-"skills.technical":"Technical skills",
+<div class="skill">
 
-"skills.professional":"Professional skills",
+<span>HTML & CSS</span>
 
-"skill.support":"User support",
+<div class="barra-skill"><div class="progreso" data-percent="60"><span>60%</span></div></div>
 
-"skill.teamwork":"Teamwork",
+</div>
 
-"skill.problem":"Problem solving",
+<div class="skill">
 
-"skill.english":"Technical English",
+<span>JavaScript</span>
 
-"resume.title":"Education and experience",
+<div class="barra-skill"><div class="progreso" data-percent="40"><span>40%</span></div></div>
 
-"resume.education":"Education",
+</div>
 
-"resume.experience":"Experience",
+<div class="skill">
 
-"edu.1.title":"Professional Technician in Web Programming",
+<span>Java</span>
 
-"edu.1.text":"Training in programming fundamentals, web development and website creation using HTML, JavaScript and Java.",
+<div class="barra-skill"><div class="progreso" data-percent="35"><span>35%</span></div></div>
 
-"edu.2.title":"Web Development Fundamentals",
+</div>
 
-"edu.2.text":"Learning web structures, programming logic and digital tools.",
+</div>
 
-"exp.1.title":"Academic Web Projects",
+<div class="col">
 
-"exp.1.text":"Participation in academic projects applying HTML, JavaScript and Java knowledge to create digital solutions.",
+<h3>Habilidades profesionales</h3>
 
-"exp.2.title":"Programming Practice",
+<div class="skill">
 
-"exp.2.text":"Continuous improvement of programming and web development skills.",
+<span>Trabajo en equipo</span>
 
-"portfolio.title":"Projects",
+<div class="barra-skill"><div class="progreso" data-percent="80"><span>80%</span></div></div>
 
-"project.1.title":"Academic Web Project",
+</div>
 
-"project.1.text":"HTML, CSS and JavaScript",
+<div class="skill">
 
-"project.2.title":"Basic Java Application",
+<span>Resolución de problemas</span>
 
-"project.2.text":"Java and programming logic",
+<div class="barra-skill"><div class="progreso" data-percent="70"><span>70%</span></div></div>
 
-"project.3.title":"Web Development Practice",
+</div>
 
-"project.3.text":"Web design and digital technologies",
+<div class="skill">
 
-"contact.title":"Contact",
+<span>Aprendizaje continuo</span>
 
-"contact.intro":"If you have a project or want to know more about my profile, feel free to contact me.",
+<div class="barra-skill"><div class="progreso" data-percent="90"><span>90%</span></div></div>
 
-"contact.emailLabel":"Email",
+</div>
 
-"contact.linkedinValue":"Professional profile",
+</div>
 
-"footer.note":"Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
+</div>
 
-};
+</div>
 
-// El botón ES/EN funciona alternando idiomas
+</section>
 
-const DICCIONARIOS = {es: ES, en: EN};
+<section id="curriculum" class="curriculum">
 
-let idiomaActual = "es";
+<div class="contenido-seccion">
 
-function aplicarIdioma(idioma){
+<h2>Formación y experiencia</h2>
 
-const textos = DICCIONARIOS[idioma];
+<div class="fila">
 
-if(!textos) return;
+<div class="col izquierda">
 
-document.querySelectorAll("[data-i18n]").forEach(elemento=>{
+<h3>Formación</h3>
 
-const clave = elemento.getAttribute("data-i18n");
+<div class="item izq">
 
-if(textos[clave] !== undefined){
+<h4>Técnico Profesional en Programación Web</h4>
 
-elemento.textContent = textos[clave];
+<span class="casa">Institución Universitaria de El Espinal - UniEspinal</span>
 
-}
+<span class="fecha">2025 - 2027</span>
 
-});
+<p>
 
-document.documentElement.lang = idioma;
+Formación en fundamentos de programación, desarrollo web,
 
-idiomaActual = idioma;
+creación de páginas y manejo básico de tecnologías digitales.
 
-}
+</p>
 
-function cambiarIdioma(){
+</div>
 
-aplicarIdioma(idiomaActual === "es" ? "en" : "es");
+<div class="item izq">
 
-}
+<h4>Fundamentos de Desarrollo Web</h4>
 
-document.addEventListener("DOMContentLoaded",()=>{
+<span class="casa">UniEspinal</span>
 
-aplicarIdioma("es");
+<span class="fecha">2025</span>
 
-});
+<p>
+
+Aprendizaje de HTML, JavaScript, Java y lógica de programación.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col derecha">
+
+<h3>Experiencia</h3>
+
+<div class="item der">
+
+<h4>Desarrollo de proyectos académicos web</h4>
+
+<span class="casa">Proyecto universitario - UniEspinal</span>
+
+<span class="fecha">2025 - Actualidad</span>
+
+<p>
+
+Aplicación de conocimientos básicos de HTML, JavaScript y Java
+
+en ejercicios y proyectos orientados al desarrollo web.
+
+</p>
+
+</div>
+
+<div class="item der">
+
+<h4>Práctica personal de programación</h4>
+
+<span class="casa">Proyecto personal</span>
+
+<span class="fecha">2025 - Actualidad</span>
+
+<p>
+
+Fortalecimiento de habilidades mediante práctica constante,
+
+aprendizaje de herramientas digitales y creación de soluciones básicas.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contacto" class="contacto">
+
+<div class="contenido-seccion">
+
+<h2>Contacto</h2>
+
+<div class="tarjetas-contacto">
+
+<a class="tarjeta" href="mailto:estiven42@itfip.edu.co">
+
+<strong>Correo</strong>
+
+<span>estiven42@itfip.edu.co</span>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p class="footer-nota">
+
+Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
