@@ -1,194 +1,215 @@
- WEB PROFILE TEMPLATE - SCRIPT
+SCRIPT.JS - ESTIVEN MURCIA
 
- Estiven Murcia · Técnico Profesional en Programación Web
+   Técnico Profesional en Programación Web
+
+   Incluye cambio ES/EN y animaciones de aparición
 
 ============================================================ */
 
 /* =========================
 
-   1. SPANISH TEXTS
+   DICCIONARIOS
 
 ========================= */
 
 const ES = {
 
-"nav.home": "INICIO",
+  "nav.home":"INICIO",
 
-"nav.about": "SOBRE MÍ",
+  "nav.about":"SOBRE MÍ",
 
-"nav.skills": "HABILIDADES",
+  "nav.skills":"HABILIDADES",
 
-"nav.resume": "FORMACIÓN",
+  "nav.resume":"FORMACIÓN",
 
-"nav.portfolio": "PROYECTOS",
+  "nav.portfolio":"PROYECTOS",
 
-"nav.contact": "CONTACTO",
+  "nav.contact":"CONTACTO",
 
-"hero.role": "Técnico Profesional en Programación Web · Desarrollador Web Junior",
+  "hero.role":"Técnico Profesional en Programación Web · Desarrollador Web Junior",
 
-"about.title": "Sobre Mí",
+  "about.title":"Sobre Mí",
 
-"about.text": "Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.",
+  "about.text":"Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.",
 
-"about.infoTitle": "Información",
+  "about.valueLocation":"Espinal, Tolima, Colombia",
 
-"about.labelLocation": "Ubicación",
+  "about.valueLanguages":"Español (nativo) · Inglés básico",
 
-"about.valueLocation": "Espinal, Tolima, Colombia",
+  "interest.1":"PROGRAMACIÓN",
 
-"about.labelEmail": "Correo",
+  "interest.2":"DESARROLLO WEB",
 
-"about.labelLanguages": "Idiomas",
+  "interest.3":"TECNOLOGÍA",
 
-"about.valueLanguages": "Español (nativo) · Inglés básico",
+  "interest.4":"INNOVACIÓN",
 
-"about.labelStatus": "Disponibilidad",
+  "contact.intro":"Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.",
 
-"about.valueStatus": "Abierto a prácticas",
+  "contact.linkedinValue":"Perfil profesional",
 
-"about.interestsTitle": "Intereses",
-
-"interest.1": "PROGRAMACIÓN",
-
-"interest.2": "DESARROLLO WEB",
-
-"interest.3": "TECNOLOGÍA",
-
-"interest.4": "INNOVACIÓN",
-
-"skills.title": "Habilidades",
-
-"skills.technical": "Habilidades técnicas",
-
-"skills.professional": "Habilidades profesionales",
-
-"skill.support": "Soporte al usuario",
-
-"skill.teamwork": "Trabajo en equipo",
-
-"skill.problem": "Resolución de problemas",
-
-"skill.english": "Inglés técnico",
-
-"resume.title": "Formación y experiencia",
-
-"resume.education": "Formación",
-
-"resume.experience": "Experiencia",
-
-"edu.1.title": "Técnico Profesional en Programación Web",
-
-"edu.1.text": "Formación enfocada en aprender los fundamentos de la programación, diferentes lenguajes de programación y herramientas tecnológicas, fortaleciendo las bases necesarias para el desarrollo web y la creación de soluciones digitales.",
-
-"edu.2.title": "Fundamentos de Programación",
-
-"edu.2.text": "Aprendizaje de conceptos básicos de programación y herramientas tecnológicas.",
-
-"exp.1.title": "Desarrollo de proyectos académicos web",
-
-"exp.1.text": "Participación en proyectos académicos aplicando conocimientos básicos de HTML, CSS, JavaScript y Java.",
-
-"exp.2.title": "Práctica personal de programación",
-
-"exp.2.text": "Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.",
-
-"portfolio.title": "Proyectos",
-
-"contact.title": "Contacto",
-
-"contact.emailLabel": "Correo",
-
-"contact.linkedinValue": "Perfil profesional",
-
-"footer.note": "Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
+  "footer.note":"Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
 
 };
-
-/* =========================
-
-   2. ENGLISH TEXTS
-
-========================= */
 
 const EN = {
 
-"nav.home": "HOME",
+  "nav.home":"HOME",
 
-"nav.about": "ABOUT",
+  "nav.about":"ABOUT",
 
-"nav.skills": "SKILLS",
+  "nav.skills":"SKILLS",
 
-"nav.resume": "RESUME",
+  "nav.resume":"RESUME",
 
-"nav.portfolio": "PROJECTS",
+  "nav.portfolio":"PROJECTS",
 
-"nav.contact": "CONTACT",
+  "nav.contact":"CONTACT",
 
-"hero.role": "Professional Technician in Web Programming · Junior Web Developer",
+  "hero.role":"Professional Technician in Web Programming · Junior Web Developer",
 
-"about.title": "About Me",
+  "about.title":"About Me",
 
-"about.text": "I am a student of Professional Technician in Web Programming at UniEspinal, interested in web development and digital solutions. I am currently improving my programming knowledge, learning different programming languages and technological tools.",
+  "about.text":"I am a Professional Technician in Web Programming student at UniEspinal, interested in web development and digital solutions. I am currently improving my programming knowledge, different languages and technological tools.",
 
-"about.infoTitle": "Information",
+  "about.valueLocation":"Espinal, Tolima, Colombia",
 
-"about.labelLocation": "Location",
+  "about.valueLanguages":"Spanish (native) · Basic English",
 
-"about.valueLocation": "Espinal, Tolima, Colombia",
+  "interest.1":"PROGRAMMING",
 
-"about.labelEmail": "Email",
+  "interest.2":"WEB DEVELOPMENT",
 
-"about.labelLanguages": "Languages",
+  "interest.3":"TECHNOLOGY",
 
-"about.valueLanguages": "Spanish (native) · Basic English",
+  "interest.4":"INNOVATION",
 
-"about.labelStatus": "Availability",
+  "contact.intro":"If you have a project or want to know more about my professional profile, feel free to contact me.",
 
-"about.valueStatus": "Open to internships",
+  "contact.linkedinValue":"Professional profile",
 
-"about.interestsTitle": "Interests",
-
-"interest.1": "PROGRAMMING",
-
-"interest.2": "WEB DEVELOPMENT",
-
-"interest.3": "TECHNOLOGY",
-
-"interest.4": "INNOVATION",
-
-"skills.title": "Skills",
-
-"skills.technical": "Technical skills",
-
-"skills.professional": "Professional skills",
-
-"resume.title": "Education and experience",
-
-"resume.education": "Education",
-
-"resume.experience": "Experience",
-
-"edu.1.title": "Professional Technician in Web Programming",
-
-"edu.1.text": "Training focused on learning programming fundamentals, different programming languages and technological tools, strengthening the foundations required for web development and digital solutions.",
-
-"contact.title": "Contact",
-
-"contact.emailLabel": "Email",
-
-"footer.note": "Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
+  "footer.note":"Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
 
 };
 
-/* LANGUAGE SWITCHER - KEEP ORIGINAL FUNCTIONS */
-
-const DICCIONARIOS = { es: ES, en: EN };
+const DICCIONARIOS = {es:ES,en:EN};
 
 let idiomaActual = "es";
 
-function cambiarIdioma() {
+/* =========================
+
+   CAMBIO DE IDIOMA
+
+========================= */
+
+function aplicarIdioma(idioma){
+
+  const textos = DICCIONARIOS[idioma];
+
+  if(!textos) return;
+
+  document.querySelectorAll("[data-i18n]").forEach(elemento=>{
+
+    const clave = elemento.getAttribute("data-i18n");
+
+    if(textos[clave] !== undefined){
+
+      elemento.textContent = textos[clave];
+
+    }
+
+  });
+
+  idiomaActual = idioma;
+
+}
+
+function cambiarIdioma(){
 
   aplicarIdioma(idiomaActual === "es" ? "en" : "es");
 
 }
 
+/* =========================
+
+   ANIMACIONES DE APARICIÓN
+
+========================= */
+
+function activarAnimaciones(){
+
+  const elementos = document.querySelectorAll(
+
+    ".contenido-seccion, .skill, .interes, .item, .proyecto, .tarjeta, .contenido-banner"
+
+  );
+
+  elementos.forEach(elemento=>{
+
+    elemento.classList.add("animacion-oculta");
+
+  });
+
+  const observador = new IntersectionObserver((entradas, obs)=>{
+
+    entradas.forEach(entrada=>{
+
+      if(entrada.isIntersecting){
+
+        entrada.target.classList.add("mostrar");
+
+        obs.unobserve(entrada.target);
+
+      }
+
+    });
+
+  },{
+
+    threshold:0.15
+
+  });
+
+  elementos.forEach(elemento=>{
+
+    observador.observe(elemento);
+
+  });
+
+}
+
+/* =========================
+
+   BARRAS DE HABILIDADES
+
+========================= */
+
+function animarHabilidades(){
+
+ const barras=document.querySelectorAll(".progreso");
+
+ barras.forEach(barra=>{
+
+   const porcentaje=barra.getAttribute("data-percent");
+
+   barra.style.width=porcentaje+"%";
+
+ });
+
+}
+
+/* =========================
+
+   INICIO
+
+========================= */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+ aplicarIdioma("es");
+
+ animarHabilidades();
+
+ activarAnimaciones();
+
+});
