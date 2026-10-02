@@ -1,545 +1,307 @@
-/* ------------------------------------------------------------
-   1. VARIABLES Y ESTILOS GENERALES
-   ------------------------------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@300;400;600;800&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Work Sans', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #1e2326;
-  color: #fff;
-}
-
-/* ------------------------------------------------------------
-   2. HEADER Y NAVEGACIÓN
-   ------------------------------------------------------------ */
-.contenedor-header {
-  background: #1e2326;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.contenedor-header header {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.contenedor-header header .logo a {
-  font-family: 'Righteous', cursive;
-  font-size: 36px;
-  color: #1CB69D;
-  text-decoration: none;
-}
-
-.contenedor-header header nav ul {
-  display: flex;
-  list-style: none;
-}
-
-.contenedor-header header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.contenedor-header header nav ul li a:hover {
-  color: #1CB69D;
-}
-
-/* Botón de Idioma y Menú Responsivo */
-.acciones-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.btn-idioma {
-  background: transparent;
-  border: 1px solid #1CB69D;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background 0.3s, color 0.3s;
-}
-
-.btn-idioma:hover {
-  background: #1CB69D;
-  color: #1e2326;
-}
-
-.btn-idioma span {
-  transition: opacity 0.3s, font-weight 0.3s;
-}
-
-.nav-responsive {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
-}
-
-/* ------------------------------------------------------------
-   3. INICIO / HERO
-   ------------------------------------------------------------ */
-.inicio {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.contenido-banner .contenedor-img {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 20px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid #1CB69D;
-}
-
-.contenido-banner .contenedor-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.contenido-banner h1 {
-  font-size: 42px;
-  font-family: 'Righteous', cursive;
-  margin-bottom: 10px;
-}
-
-.contenido-banner h2 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #1CB69D;
-  margin-bottom: 20px;
-}
-
-.contenido-banner .redes a {
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  margin: 0 8px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.contenido-banner .redes a:hover {
-  background-color: #1CB69D;
-  border-color: #1CB69D;
-  color: #1e2326;
-}
-
-/* ------------------------------------------------------------
-   4. SECCIONES COMUNES
-   ------------------------------------------------------------ */
-.contenido-seccion {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
-
-.contenido-seccion h2 {
-  font-size: 32px;
-  font-family: 'Righteous', cursive;
-  text-align: center;
-  padding: 20px 0;
-  color: #1CB69D;
-}
-
-/* ------------------------------------------------------------
-   5. SOBRE MÍ
-   ------------------------------------------------------------ */
-.sobremi {
-  background-color: #252A2E;
-}
-
-.sobremi p {
-  line-height: 28px;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #ccc;
-}
-
-.fila {
-  display: flex;
-  gap: 30px;
-}
-
-.col {
-  width: 50%;
-}
-
-.col h3 {
-  font-size: 22px;
-  font-family: 'Righteous', cursive;
-  margin-bottom: 20px;
-}
-
-.sobremi .datos li {
-  list-style: none;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #363a3d;
-  padding-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.sobremi .datos li strong {
-  color: #1CB69D;
-}
-
-.sobremi .datos li .destacado {
-  background-color: #1CB69D;
-  color: #1e2326;
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-weight: 600;
-}
-
-.contenedor-intereses {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.interes {
-  background-color: #1e2326;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.interes:hover {
-  transform: translateY(-5px);
-}
-
-.interes i {
-  font-size: 30px;
-  color: #1CB69D;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.interes span {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-/* ------------------------------------------------------------
-   6. HABILIDADES
-   ------------------------------------------------------------ */
-.skills .skill {
-  margin-bottom: 20px;
-}
-
-.skills .skill .skill-nombre {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.skills .barra-skill {
-  height: 8px;
-  width: 100%;
-  background-color: #252A2E;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-}
-
-.skills .progreso {
-  background-color: #1CB69D;
-  height: 100%;
-  width: 0%;
-  transition: width 1.2s ease-in-out;
-  border-radius: 5px;
-}
-
-/* ------------------------------------------------------------
-   7. FORMACIÓN Y EXPERIENCIA
-   ------------------------------------------------------------ */
-.curriculum {
-  background-color: #252A2E;
-}
-
-.curriculum .item {
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #1e2326;
-  border-left: 4px solid #1CB69D;
-  border-radius: 0 8px 8px 0;
-}
-
-.curriculum .item h4 {
-  font-size: 18px;
-  color: #1CB69D;
-  margin-bottom: 5px;
-}
-
-.curriculum .item .casa {
-  font-size: 13px;
-  font-weight: 600;
-  color: #888;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.curriculum .item p {
-  font-size: 14px;
-  line-height: 22px;
-  color: #ccc;
-}
-
-/* ------------------------------------------------------------
-   8. PROYECTOS / PORTAFOLIO
-   ------------------------------------------------------------ */
-.portfolio .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.portfolio .proyecto {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  background-color: #252A2E;
-  height: 200px;
-}
-
-.portfolio .proyecto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-
-.portfolio .proyecto .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(28, 182, 157, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s;
-  padding: 20px;
-  text-align: center;
-}
-
-.portfolio .proyecto:hover img {
-  transform: scale(1.1);
-}
-
-.portfolio .proyecto:hover .overlay {
-  opacity: 1;
-}
-
-.portfolio .proyecto .overlay h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #1e2326;
-}
-
-.portfolio .proyecto .overlay p {
-  font-size: 13px;
-  color: #1e2326;
-  font-weight: 600;
-}
-
-/* ------------------------------------------------------------
-   9. CONTACTO
-   ------------------------------------------------------------ */
-.contacto {
-  background-color: #252A2E;
-}
-
-.contacto-intro {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #ccc;
-}
-
-.tarjetas-contacto {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.tarjeta {
-  background-color: #1e2326;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid transparent;
-  transition: transform 0.3s, border-color 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tarjeta:hover {
-  transform: translateY(-5px);
-  border-color: #1CB69D;
-}
-
-.tarjeta i {
-  font-size: 36px;
-  color: #1CB69D;
-  margin-bottom: 15px;
-}
-
-.tarjeta strong {
-  font-size: 18px;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.tarjeta span {
-  font-size: 14px;
-  color: #aaa;
-  word-break: break-all;
-}
-
-/* ------------------------------------------------------------
-   10. FOOTER
-   ------------------------------------------------------------ */
-footer {
-  background-color: #1e2326;
-  padding: 40px 20px;
-  text-align: center;
-  position: relative;
-}
-
-footer .arriba {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #1CB69D;
-  color: #1e2326;
-  border-radius: 50%;
-  line-height: 40px;
-  font-size: 18px;
-  margin-bottom: 15px;
-  transition: transform 0.3s;
-}
-
-footer .arriba:hover {
-  transform: translateY(-5px);
-}
-
-footer .footer-nota {
-  font-size: 14px;
-  color: #888;
-}
-
-/* ------------------------------------------------------------
-   11. ANIMACIONES DE DESPLAZAMIENTO
-   ------------------------------------------------------------ */
-.animacion-oculta {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.animacion-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ------------------------------------------------------------
-   12. DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
-   ------------------------------------------------------------ */
-@media screen and (max-width: 768px) {
-  .nav-responsive {
-    display: block;
-  }
-
-  .contenedor-header header nav {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #1e2326;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s ease;
-  }
-
-  .contenedor-header header nav.responsive {
-    height: calc(100vh - 60px);
-  }
-
-  .contenedor-header header nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-  }
-
-  .contenedor-header header nav ul li {
-    margin: 15px 0;
-  }
-
-  .fila {
-    flex-direction: column;
-  }
-
-  .col {
-    width: 100%;
-  }
-
-  .contenido-banner h1 {
-    font-size: 32px;
-  }
-
-  .contenido-banner h2 {
-    font-size: 16px;
-  }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estiven Murcia · Web Developer</title>
+  <meta name="description" content="Estiven Murcia - Técnico Profesional en Programación Web.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="contenedor-header">
+    <header>
+      <div class="logo">
+        <a href="#inicio">estiven</a>
+      </div>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio" data-i18n="nav.home" onclick="cerrarMenu()">INICIO</a></li>
+          <li><a href="#sobremi" data-i18n="nav.about" onclick="cerrarMenu()">SOBRE MÍ</a></li>
+          <li><a href="#skills" data-i18n="nav.skills" onclick="cerrarMenu()">HABILIDADES</a></li>
+          <li><a href="#curriculum" data-i18n="nav.resume" onclick="cerrarMenu()">FORMACIÓN</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio" onclick="cerrarMenu()">PROYECTOS</a></li>
+          <li><a href="#contacto" data-i18n="nav.contact" onclick="cerrarMenu()">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <div class="acciones-header">
+        <button id="btn-idioma" class="btn-idioma" type="button" onclick="cambiarIdioma()" aria-label="Cambiar idioma">
+          <span id="idioma-es">ES</span> / <span id="idioma-en">EN</span>
+        </button>
+
+        <button class="nav-responsive" type="button" onclick="mostrarOcultarMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio" class="inicio">
+    <div class="contenido-banner">
+      <div class="contenedor-img">
+        <img src="images/profile.jpg" alt="Foto de perfil de Estiven Murcia" onerror="this.style.display='none'">
+      </div>
+
+      <h1>Estiven Murcia</h1>
+      <h2 data-i18n="hero.role">Técnico Profesional en Programación Web</h2>
+
+      <div class="redes">
+        <!-- Reemplaza tu_usuario por tu usuario real de GitHub y LinkedIn -->
+        <a href="https://github.com/tu_usuario" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tu_usuario" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:eestiven42@itfip.edu.co" aria-label="Correo">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+      <h2 data-i18n="about.title">Sobre Mí</h2>
+
+      <p data-i18n="about.text">
+        Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.
+      </p>
+
+      <div class="fila">
+        <div class="col">
+          <h3 data-i18n="about.infoTitle">Información</h3>
+          <ul class="datos">
+            <li>
+              <strong data-i18n="about.labelLocation">Ubicación</strong>
+              <span data-i18n="about.valueLocation">Espinal, Tolima, Colombia</span>
+            </li>
+            <li>
+              <strong data-i18n="about.labelEmail">Correo</strong>
+              <span>eestiven42@itfip.edu.co</span>
+            </li>
+            <li>
+              <strong data-i18n="about.labelLanguages">Idiomas</strong>
+              <span data-i18n="about.valueLanguages">Español (nativo) · Inglés básico</span>
+            </li>
+            <li>
+              <strong data-i18n="about.labelStatus">Disponibilidad</strong>
+              <span class="destacado" data-i18n="about.valueStatus">Abierto a prácticas</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3 data-i18n="about.interestsTitle">Intereses</h3>
+          <div class="contenedor-intereses">
+            <div class="interes">
+              <i class="fa-solid fa-code"></i>
+              <span data-i18n="interest.1">PROGRAMACIÓN</span>
+            </div>
+            <div class="interes">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span data-i18n="interest.2">DESARROLLO WEB</span>
+            </div>
+            <div class="interes">
+              <i class="fa-solid fa-microchip"></i>
+              <span data-i18n="interest.3">TECNOLOGÍA</span>
+            </div>
+            <div class="interes">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-i18n="interest.4">INNOVACIÓN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="contenido-seccion">
+      <h2 data-i18n="skills.title">Habilidades</h2>
+
+      <div class="fila">
+        <div class="col">
+          <h3 data-i18n="skills.technical">Habilidades técnicas</h3>
+
+          <div class="skill">
+            <span class="skill-nombre">HTML &amp; CSS</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="70"><span>70%</span></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span class="skill-nombre">JavaScript</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="55"><span>55%</span></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span class="skill-nombre">Java</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="50"><span>50%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3 data-i18n="skills.professional">Habilidades profesionales</h3>
+
+          <div class="skill">
+            <span class="skill-nombre" data-i18n="skill.support">Soporte al usuario</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="80"><span>80%</span></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span class="skill-nombre" data-i18n="skill.teamwork">Trabajo en equipo</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="85"><span>85%</span></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span class="skill-nombre" data-i18n="skill.problem">Resolución de problemas</span>
+            <div class="barra-skill">
+              <div class="progreso" data-percent="75"><span>75%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+      <h2 data-i18n="resume.title">Formación y experiencia</h2>
+
+      <div class="fila">
+        <div class="col izquierda">
+          <h3 data-i18n="resume.education">Formación</h3>
+
+          <div class="item izq">
+            <h4 data-i18n="edu.1.title">Técnico Profesional en Programación Web</h4>
+            <span class="casa">Institución Universitaria de El Espinal - UniEspinal</span>
+            <p data-i18n="edu.1.text">Formación enfocada en aprender los fundamentos de la programación, diferentes lenguajes de programación y herramientas tecnológicas, fortaleciendo las bases necesarias para el desarrollo web y la creación de soluciones digitales.</p>
+            <div class="conectori"><div class="circuloi"></div></div>
+          </div>
+
+          <div class="item izq">
+            <h4 data-i18n="edu.2.title">Fundamentos de Programación</h4>
+            <span class="casa">UniEspinal</span>
+            <p data-i18n="edu.2.text">Aprendizaje de conceptos básicos de programación y herramientas tecnológicas.</p>
+            <div class="conectori"><div class="circuloi"></div></div>
+          </div>
+        </div>
+
+        <div class="col derecha">
+          <h3 data-i18n="resume.experience">Experiencia</h3>
+
+          <div class="item der">
+            <h4 data-i18n="exp.1.title">Desarrollo de proyectos académicos web</h4>
+            <span class="casa">UniEspinal</span>
+            <p data-i18n="exp.1.text">Participación en proyectos académicos aplicando conocimientos básicos de HTML, CSS, JavaScript y Java.</p>
+            <div class="conectord"><div class="circulod"></div></div>
+          </div>
+
+          <div class="item der">
+            <h4 data-i18n="exp.2.title">Práctica personal de programación</h4>
+            <span class="casa">Proyectos personales</span>
+            <p data-i18n="exp.2.text">Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.</p>
+            <div class="conectord"><div class="circulod"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+      <h2 data-i18n="portfolio.title">Proyectos</h2>
+
+      <div class="galeria">
+        <a class="proyecto" href="https://github.com/tu_usuario" target="_blank" rel="noopener">
+          <img src="images/project-1.png" alt="Proyecto 1" onerror="this.style.opacity=0">
+          <div class="overlay">
+            <h3 data-i18n="project.1.title">Proyecto Web Personal</h3>
+            <p data-i18n="project.1.text">HTML · CSS · JavaScript</p>
+          </div>
+        </a>
+
+        <a class="proyecto" href="https://github.com/tu_usuario" target="_blank" rel="noopener">
+          <img src="images/project-2.png" alt="Proyecto 2" onerror="this.style.opacity=0">
+          <div class="overlay">
+            <h3 data-i18n="project.2.title">Aplicación Web Académica</h3>
+            <p data-i18n="project.2.text">JavaScript · Desarrollo Web</p>
+          </div>
+        </a>
+
+        <a class="proyecto" href="https://github.com/tu_usuario" target="_blank" rel="noopener">
+          <img src="images/project-3.png" alt="Proyecto 3" onerror="this.style.opacity=0">
+          <div class="overlay">
+            <h3 data-i18n="project.3.title">Prácticas de Programación</h3>
+            <p data-i18n="project.3.text">Java · Fundamentos de programación</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+      <h2 data-i18n="contact.title">Contacto</h2>
+      <p class="contacto-intro" data-i18n="contact.intro">
+        Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.
+      </p>
+
+      <div class="tarjetas-contacto">
+        <a class="tarjeta" href="mailto:eestiven42@itfip.edu.co">
+          <i class="fa-solid fa-envelope"></i>
+          <strong data-i18n="contact.emailLabel">Correo</strong>
+          <span>eestiven42@itfip.edu.co</span>
+        </a>
+
+        <a class="tarjeta" href="https://github.com/tu_usuario" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <strong>GitHub</strong>
+          <span>github.com/tu_usuario</span>
+        </a>
+
+        <a class="tarjeta" href="https://www.linkedin.com/in/tu_usuario" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <strong>LinkedIn</strong>
+          <span data-i18n="contact.linkedinValue">Perfil profesional</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#inicio" class="arriba" aria-label="Volver arriba">
+      <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <p class="footer-nota" data-i18n="footer.note">
+      Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
