@@ -1,110 +1,122 @@
-/* ANIMACION HABILIDADES */
+Esta corrección está enfocada en solucionar el error actual:
+
+- Las animaciones no cargan.
+
+- Las barras de habilidades no se llenan.
+
+- El JavaScript se estaba rompiendo por errores de sintaxis.
+
+IMPORTANTE:
+
+Mantener los diccionarios ES y EN con la información de Estiven Murcia.
+
+Reemplazar desde la parte de funciones (después de los diccionarios) por este código:
+
+const DICCIONARIOS = { es: ES, en: EN };
+
+let idiomaActual = "es";
+
+function aplicarIdioma(idioma){
+
+const textos = DICCIONARIOS[idioma];
+
+if(!textos) return;
+
+document.querySelectorAll("[data-i18n]").forEach(elemento=>{
+
+const clave = elemento.getAttribute("data-i18n");
+
+if(textos[clave] !== undefined){
+
+elemento.textContent = textos[clave];
+
+}
+
+});
+
+idiomaActual = idioma;
+
+}
+
+function cambiarIdioma(){
+
+aplicarIdioma(idiomaActual === "es" ? "en" : "es");
+
+}
+
+let menuVisible = false;
+
+function mostrarOcultarMenu(){
+
+const nav = document.getElementById("nav");
+
+menuVisible = !menuVisible;
+
+nav.className = menuVisible ? "responsive" : "";
+
+}
+
+function cerrarMenu(){
+
+document.getElementById("nav").className = "";
+
+menuVisible = false;
+
+}
+
+/* CORRECCION DE BARRAS DE HABILIDADES */
 
 function animarHabilidades(){
 
-    const habilidades = document.querySelectorAll(".skill");
+const barras = document.querySelectorAll(".progreso");
 
-    const observador = new IntersectionObserver((entradas, observer)=>{
+barras.forEach(barra=>{
 
-        entradas.forEach(entrada=>{
+barra.style.width = "0";
 
-            if(entrada.isIntersecting){
+setTimeout(()=>{
 
-                const habilidad = entrada.target;
+const porcentaje = barra.getAttribute("data-percent");
 
-                habilidad.classList.add("mostrar");
+barra.style.width = porcentaje + "%";
 
-                const barra = habilidad.querySelector(".progreso");
+},300);
 
-                if(barra){
-
-                    const porcentaje = barra.getAttribute("data-percent");
-
-                    barra.style.width = porcentaje + "%";
-
-                }
-
-                observer.unobserve(habilidad);
-
-            }
-
-        });
-
-    }, {threshold:0.4});
-
-    habilidades.forEach(habilidad=>{
-
-        observador.observe(habilidad);
-
-    });
+});
 
 }
 
-/* ANIMACIONES GENERALES */
+/* ANIMACIONES DE ENTRADA */
 
 function activarAnimaciones(){
 
-    const elementos = document.querySelectorAll(
+const elementos = document.querySelectorAll(
 
-        ".contenido-seccion, .item, .tarjeta, .proyecto"
+".contenido-seccion, .item, .skill, .tarjeta, .proyecto"
 
-    );
+);
 
-    const observador = new IntersectionObserver((entradas)=>{
+const observador = new IntersectionObserver((entradas)=>{
 
-        entradas.forEach(entrada=>{
+entradas.forEach(entrada=>{
 
-            if(entrada.isIntersecting){
+if(entrada.isIntersecting){
 
-                entrada.target.classList.add("animacion-visible");
-
-            }
-
-        });
-
-    }, {threshold:0.2});
-
-    elementos.forEach(elemento=>{
-
-        elemento.classList.add("animacion-oculta");
-
-        observador.observe(elemento);
-
-    });
+entrada.target.classList.add("animacion-visible");
 
 }
 
-/* ROBOT PROGRAMADOR */
+});
 
-function crearRobot(){
+},{threshold:0.15});
 
-    const robot = document.createElement("div");
+elementos.forEach(elemento=>{
 
-    robot.className = "robot-programador";
+elemento.classList.add("animacion-oculta");
 
-    robot.innerHTML = `
+observador.observe(elemento);
 
-        <div class="robot-cabeza">
-
-            <div class="ojo"></div>
-
-            <div class="ojo"></div>
-
-        </div>
-
-        <div class="robot-cuerpo"></div>
-
-        <div class="robot-piernas">
-
-            <span></span>
-
-            <span></span>
-
-        </div>
-
-    `;
-
-    document.body.appendChild(robot);
+});
 
 }
 
@@ -112,12 +124,10 @@ function crearRobot(){
 
 document.addEventListener("DOMContentLoaded",()=>{
 
-    aplicarIdioma("es");
+aplicarIdioma("es");
 
-    animarHabilidades();
+animarHabilidades();
 
-    activarAnimaciones();
-
-    crearRobot();
+activarAnimaciones();
 
 });
