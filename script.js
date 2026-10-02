@@ -1,262 +1,257 @@
-/* ============================================================
-   WEB PROFILE TEMPLATE - SCRIPT
-   UniEspinal · Técnico Profesional en Programación Web
-
-   THIS IS THE FILE YOU WILL WORK ON THE MOST.
-
-   Below there are two dictionaries: ES and EN.
-   They have exactly the same keys, but different texts.
-
-   IMPORTANT: the English version is NOT a translation of the
-   Spanish version. A professional profile in English follows
-   different rules. Read NOTES.md before you write it.
-   ============================================================ */
-
-
-/* ------------------------------------------------------------
-   1. SPANISH TEXTS
-   ------------------------------------------------------------ */
 const ES = {
-  "nav.home":      "INICIO",
-  "nav.about":     "SOBRE MÍ",
-  "nav.skills":    "HABILIDADES",
-  "nav.resume":    "FORMACIÓN",
-  "nav.portfolio": "PROYECTOS",
-  "nav.contact":   "CONTACTO",
 
-  "hero.role": "Desarrollador Web · Soporte Técnico",
+"nav.home":"INICIO",
 
-  "about.title":          "Sobre Mí",
-  "about.text":           "[Escribe aquí dos o tres frases sobre ti: qué estudias, qué te interesa dentro del desarrollo web y qué estás buscando ahora.]",
-  "about.infoTitle":      "Información",
-  "about.labelLocation":  "Ubicación",
-  "about.valueLocation":  "[Ciudad], Colombia",
-  "about.labelEmail":     "Correo",
-  "about.labelLanguages": "Idiomas",
-  "about.valueLanguages": "Español (nativo) · Inglés ([tu nivel])",
-  "about.labelStatus":    "Disponibilidad",
-  "about.valueStatus":    "Abierto a prácticas",
-  "about.interestsTitle": "Intereses",
+"nav.about":"SOBRE MÍ",
 
-  "interest.1": "CÓDIGO",
-  "interest.2": "SOPORTE",
-  "interest.3": "LECTURA",
-  "interest.4": "JUEGOS",
+"nav.skills":"HABILIDADES",
 
-  "skills.title":        "Habilidades",
-  "skills.technical":    "Habilidades técnicas",
-  "skills.professional": "Habilidades profesionales",
-  "skill.support":       "Soporte al usuario",
-  "skill.teamwork":      "Trabajo en equipo",
-  "skill.problem":       "Resolución de problemas",
-  "skill.english":       "Inglés técnico",
+"nav.resume":"FORMACIÓN",
 
-  "resume.title":      "Formación y experiencia",
-  "resume.education":  "Formación",
-  "resume.experience": "Experiencia",
+"nav.portfolio":"PROYECTOS",
 
-  "edu.1.title": "Técnico Profesional en Programación Web",
-  "edu.1.text":  "[Una o dos frases sobre lo que estás aprendiendo y qué sabes hacer ahora.]",
-  "edu.2.title": "[Curso o certificación]",
-  "edu.2.text":  "[Qué aprendiste y para qué te sirve.]",
+"nav.contact":"CONTACTO",
 
-  "exp.1.title": "[Rol o tipo de proyecto]",
-  "exp.1.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
-  "exp.2.title": "[Rol o tipo de proyecto]",
-  "exp.2.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
+"hero.role":"Técnico Profesional en Programación Web · Desarrollador Web Junior",
 
-  "portfolio.title": "Proyectos",
-  "project.1.title": "[Nombre del proyecto]",
-  "project.1.text":  "[Tecnologías usadas]",
-  "project.2.title": "[Nombre del proyecto]",
-  "project.2.text":  "[Tecnologías usadas]",
-  "project.3.title": "[Nombre del proyecto]",
-  "project.3.text":  "[Tecnologías usadas]",
+"about.title":"Sobre Mí",
 
-  "contact.title":         "Contacto",
-  "contact.intro":         "[Una frase invitando a escribirte. Por ejemplo: ¿Tienes un proyecto o una vacante? Escríbeme.]",
-  "contact.emailLabel":    "Correo",
-  "contact.linkedinValue": "[Tu perfil profesional]",
+"about.text":"Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal. Tengo conocimientos básicos en HTML, JavaScript y Java, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente busco fortalecer mis habilidades en programación y participar en proyectos tecnológicos.",
 
-  "footer.note": "[Tu nombre] · Técnico Profesional en Programación Web · UniEspinal"
+"about.infoTitle":"Información",
+
+"about.labelLocation":"Ubicación",
+
+"about.valueLocation":"Espinal, Tolima, Colombia",
+
+"about.labelEmail":"Correo",
+
+"about.labelLanguages":"Idiomas",
+
+"about.valueLanguages":"Español (nativo) · Inglés básico",
+
+"about.labelStatus":"Disponibilidad",
+
+"about.valueStatus":"Abierto a prácticas",
+
+"about.interestsTitle":"Intereses",
+
+"interest.1":"CÓDIGO",
+
+"interest.2":"DESARROLLO WEB",
+
+"interest.3":"TECNOLOGÍA",
+
+"interest.4":"APRENDIZAJE",
+
+"skills.title":"Habilidades",
+
+"skills.technical":"Habilidades técnicas",
+
+"skills.professional":"Habilidades profesionales",
+
+"skill.support":"Soporte al usuario",
+
+"skill.teamwork":"Trabajo en equipo",
+
+"skill.problem":"Resolución de problemas",
+
+"skill.english":"Inglés técnico",
+
+"resume.title":"Formación y experiencia",
+
+"resume.education":"Formación",
+
+"resume.experience":"Experiencia",
+
+"edu.1.title":"Técnico Profesional en Programación Web",
+
+"edu.1.text":"Formación en fundamentos de programación, desarrollo web y creación de páginas utilizando HTML, JavaScript y Java.",
+
+"edu.2.title":"Fundamentos de Desarrollo Web",
+
+"edu.2.text":"Aprendizaje de estructuras web, lógica de programación y herramientas digitales.",
+
+"exp.1.title":"Desarrollo de proyectos académicos web",
+
+"exp.1.text":"Participación en proyectos académicos aplicando conocimientos de HTML, JavaScript y Java para crear soluciones digitales.",
+
+"exp.2.title":"Práctica personal de programación",
+
+"exp.2.text":"Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.",
+
+"portfolio.title":"Proyectos",
+
+"project.1.title":"Proyecto Web Académico",
+
+"project.1.text":"HTML, CSS y JavaScript",
+
+"project.2.title":"Aplicación Básica en Java",
+
+"project.2.text":"Java y lógica de programación",
+
+"project.3.title":"Prácticas de Desarrollo Web",
+
+"project.3.text":"Diseño web y tecnologías digitales",
+
+"contact.title":"Contacto",
+
+"contact.intro":"Si tienes un proyecto o deseas conocer más sobre mi perfil, puedes contactarme.",
+
+"contact.emailLabel":"Correo",
+
+"contact.linkedinValue":"Perfil profesional",
+
+"footer.note":"Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
+
 };
 
-
-/* ------------------------------------------------------------
-   2. ENGLISH TEXTS
-
-   Before writing this section, remember:
-   - Use action verbs: built, configured, fixed, tested, supported.
-   - Do not include age, marital status or a home address.
-   - Do not translate word by word. Rewrite.
-   ------------------------------------------------------------ */
 const EN = {
-  "nav.home":      "HOME",
-  "nav.about":     "ABOUT",
-  "nav.skills":    "SKILLS",
-  "nav.resume":    "RESUME",
-  "nav.portfolio": "PROJECTS",
-  "nav.contact":   "CONTACT",
 
-  "hero.role": "Web Developer · Technical Support",
+"nav.home":"HOME",
 
-  "about.title":          "About Me",
-  "about.text":           "[Write two or three sentences about yourself: what you study, what interests you in web development, and what you are looking for now.]",
-  "about.infoTitle":      "Information",
-  "about.labelLocation":  "Location",
-  "about.valueLocation":  "[City], Colombia",
-  "about.labelEmail":     "Email",
-  "about.labelLanguages": "Languages",
-  "about.valueLanguages": "Spanish (native) · English ([your level])",
-  "about.labelStatus":    "Availability",
-  "about.valueStatus":    "Open to internships",
-  "about.interestsTitle": "Interests",
+"nav.about":"ABOUT",
 
-  "interest.1": "CODE",
-  "interest.2": "SUPPORT",
-  "interest.3": "READING",
-  "interest.4": "GAMING",
+"nav.skills":"SKILLS",
 
-  "skills.title":        "Skills",
-  "skills.technical":    "Technical skills",
-  "skills.professional": "Professional skills",
-  "skill.support":       "User support",
-  "skill.teamwork":      "Teamwork",
-  "skill.problem":       "Problem solving",
-  "skill.english":       "Technical English",
+"nav.resume":"RESUME",
 
-  "resume.title":      "Education and experience",
-  "resume.education":  "Education",
-  "resume.experience": "Experience",
+"nav.portfolio":"PROJECTS",
 
-  "edu.1.title": "Professional Technician in Web Programming",
-  "edu.1.text":  "[One or two sentences about what you are learning and what you can do now.]",
-  "edu.2.title": "[Course or certificate]",
-  "edu.2.text":  "[What you learned and how you use it.]",
+"nav.contact":"CONTACT",
 
-  "exp.1.title": "[Role or type of project]",
-  "exp.1.text":  "[What you did, which tools you used, and what the result was.]",
-  "exp.2.title": "[Role or type of project]",
-  "exp.2.text":  "[What you did, which tools you used, and what the result was.]",
+"hero.role":"Professional Technician in Web Programming · Junior Web Developer",
 
-  "portfolio.title": "Projects",
-  "project.1.title": "[Project name]",
-  "project.1.text":  "[Technologies used]",
-  "project.2.title": "[Project name]",
-  "project.2.text":  "[Technologies used]",
-  "project.3.title": "[Project name]",
-  "project.3.text":  "[Technologies used]",
+"about.title":"About Me",
 
-  "contact.title":         "Contact",
-  "contact.intro":         "[One sentence inviting people to write to you. Example: Have a project or a vacancy? Send me a message.]",
-  "contact.emailLabel":    "Email",
-  "contact.linkedinValue": "[Your professional profile]",
+"about.text":"I am a student of Professional Technician in Web Programming at UniEspinal. I have basic knowledge of HTML, JavaScript and Java, with interest in web development and digital solutions. I am currently improving my programming skills and looking for opportunities to participate in technology projects.",
 
-  "footer.note": "[Your name] · Professional Technician in Web Programming · UniEspinal"
+"about.infoTitle":"Information",
+
+"about.labelLocation":"Location",
+
+"about.valueLocation":"Espinal, Tolima, Colombia",
+
+"about.labelEmail":"Email",
+
+"about.labelLanguages":"Languages",
+
+"about.valueLanguages":"Spanish (native) · Basic English",
+
+"about.labelStatus":"Availability",
+
+"about.valueStatus":"Open to internships",
+
+"about.interestsTitle":"Interests",
+
+"interest.1":"CODE",
+
+"interest.2":"WEB DEVELOPMENT",
+
+"interest.3":"TECHNOLOGY",
+
+"interest.4":"LEARNING",
+
+"skills.title":"Skills",
+
+"skills.technical":"Technical skills",
+
+"skills.professional":"Professional skills",
+
+"skill.support":"User support",
+
+"skill.teamwork":"Teamwork",
+
+"skill.problem":"Problem solving",
+
+"skill.english":"Technical English",
+
+"resume.title":"Education and experience",
+
+"resume.education":"Education",
+
+"resume.experience":"Experience",
+
+"edu.1.title":"Professional Technician in Web Programming",
+
+"edu.1.text":"Training in programming fundamentals, web development and website creation using HTML, JavaScript and Java.",
+
+"edu.2.title":"Web Development Fundamentals",
+
+"edu.2.text":"Learning web structures, programming logic and digital tools.",
+
+"exp.1.title":"Academic Web Projects",
+
+"exp.1.text":"Participation in academic projects applying HTML, JavaScript and Java knowledge to create digital solutions.",
+
+"exp.2.title":"Programming Practice",
+
+"exp.2.text":"Continuous improvement of programming and web development skills.",
+
+"portfolio.title":"Projects",
+
+"project.1.title":"Academic Web Project",
+
+"project.1.text":"HTML, CSS and JavaScript",
+
+"project.2.title":"Basic Java Application",
+
+"project.2.text":"Java and programming logic",
+
+"project.3.title":"Web Development Practice",
+
+"project.3.text":"Web design and digital technologies",
+
+"contact.title":"Contact",
+
+"contact.intro":"If you have a project or want to know more about my profile, feel free to contact me.",
+
+"contact.emailLabel":"Email",
+
+"contact.linkedinValue":"Professional profile",
+
+"footer.note":"Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
+
 };
 
+// El botón ES/EN funciona alternando idiomas
 
-/* ============================================================
-   3. LANGUAGE SWITCHER
-   You do not need to change the code below.
-   ============================================================ */
+const DICCIONARIOS = {es: ES, en: EN};
 
-const DICCIONARIOS = { es: ES, en: EN };
 let idiomaActual = "es";
 
-function aplicarIdioma(idioma) {
-  const textos = DICCIONARIOS[idioma];
-  if (!textos) return;
+function aplicarIdioma(idioma){
 
-  document.querySelectorAll("[data-i18n]").forEach(elemento => {
-    const clave = elemento.getAttribute("data-i18n");
-    if (textos[clave] !== undefined) {
-      elemento.textContent = textos[clave];
-    } else {
-      console.warn("Missing translation key:", clave);
-    }
-  });
+const textos = DICCIONARIOS[idioma];
 
-  document.documentElement.lang = idioma;
+if(!textos) return;
 
-  const boton = document.getElementById("btn-idioma");
-  if (boton) {
-    const otro = idioma === "es" ? "en" : "es";
-    boton.innerHTML =
-      '<span class="idioma-activo">'   + idioma.toUpperCase() + '</span>' +
-      '<span class="idioma-sep">/</span>' +
-      '<span class="idioma-inactivo">' + otro.toUpperCase()   + '</span>';
-    boton.setAttribute("aria-label",
-      idioma === "es" ? "Switch to English" : "Cambiar a español");
-  }
+document.querySelectorAll("[data-i18n]").forEach(elemento=>{
 
-  idiomaActual = idioma;
+const clave = elemento.getAttribute("data-i18n");
+
+if(textos[clave] !== undefined){
+
+elemento.textContent = textos[clave];
+
 }
 
-function cambiarIdioma() {
-  aplicarIdioma(idiomaActual === "es" ? "en" : "es");
+});
+
+document.documentElement.lang = idioma;
+
+idiomaActual = idioma;
+
 }
 
+function cambiarIdioma(){
 
-/* ============================================================
-   4. RESPONSIVE MENU
-   ============================================================ */
+aplicarIdioma(idiomaActual === "es" ? "en" : "es");
 
-let menuVisible = false;
-
-function mostrarOcultarMenu() {
-  const nav = document.getElementById("nav");
-  menuVisible = !menuVisible;
-  nav.className = menuVisible ? "responsive" : "";
 }
 
-function cerrarMenu() {
-  document.getElementById("nav").className = "";
-  menuVisible = false;
-}
+document.addEventListener("DOMContentLoaded",()=>{
 
+aplicarIdioma("es");
 
-/* ============================================================
-   5. SKILL BARS
-
-   The width comes from the data-percent attribute in index.html.
-   You can add or remove skills freely: this code does not depend
-   on how many there are.
-   ============================================================ */
-
-function animarHabilidades() {
-  const barras = document.querySelectorAll(".progreso");
-
-  const mostrar = barra => {
-    const porcentaje = barra.getAttribute("data-percent") || "0";
-    barra.style.width = porcentaje + "%";
-    const etiqueta = barra.querySelector("span");
-    if (etiqueta) etiqueta.textContent = porcentaje + "%";
-  };
-
-  if (!("IntersectionObserver" in window)) {
-    barras.forEach(mostrar);
-    return;
-  }
-
-  const observador = new IntersectionObserver((entradas, obs) => {
-    entradas.forEach(entrada => {
-      if (entrada.isIntersecting) {
-        mostrar(entrada.target);
-        obs.unobserve(entrada.target);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  barras.forEach(barra => observador.observe(barra));
-}
-
-
-/* ============================================================
-   6. START
-   ============================================================ */
-
-document.addEventListener("DOMContentLoaded", () => {
-  aplicarIdioma("es");
-  animarHabilidades();
 });
