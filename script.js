@@ -1,215 +1,312 @@
-SCRIPT.JS - ESTIVEN MURCIA
+==================================================
 
-   Técnico Profesional en Programación Web
+1. INDEX.HTML - AGREGAR ROBOT
 
-   Incluye cambio ES/EN y animaciones de aparición
+==================================================
 
-============================================================ */
+Ubicar antes de:
 
-/* =========================
+<script src="script.js"></script>
 
-   DICCIONARIOS
+Agregar:
 
-========================= */
+<div class="robot-programador">
 
-const ES = {
+    <div class="robot-cabeza">
 
-  "nav.home":"INICIO",
+        <div class="ojo"></div>
 
-  "nav.about":"SOBRE MÍ",
+        <div class="ojo"></div>
 
-  "nav.skills":"HABILIDADES",
+    </div>
 
-  "nav.resume":"FORMACIÓN",
+    <div class="robot-cuerpo"></div>
 
-  "nav.portfolio":"PROYECTOS",
+    <div class="robot-piernas">
 
-  "nav.contact":"CONTACTO",
+        <span></span>
 
-  "hero.role":"Técnico Profesional en Programación Web · Desarrollador Web Junior",
+        <span></span>
 
-  "about.title":"Sobre Mí",
+    </div>
 
-  "about.text":"Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.",
+</div>
 
-  "about.valueLocation":"Espinal, Tolima, Colombia",
+==================================================
 
-  "about.valueLanguages":"Español (nativo) · Inglés básico",
+2. STYLE.CSS - ANIMACIONES DE HABILIDADES
 
-  "interest.1":"PROGRAMACIÓN",
+==================================================
 
-  "interest.2":"DESARROLLO WEB",
+.progreso {
 
-  "interest.3":"TECNOLOGÍA",
+    width:0;
 
-  "interest.4":"INNOVACIÓN",
-
-  "contact.intro":"Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.",
-
-  "contact.linkedinValue":"Perfil profesional",
-
-  "footer.note":"Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
-
-};
-
-const EN = {
-
-  "nav.home":"HOME",
-
-  "nav.about":"ABOUT",
-
-  "nav.skills":"SKILLS",
-
-  "nav.resume":"RESUME",
-
-  "nav.portfolio":"PROJECTS",
-
-  "nav.contact":"CONTACT",
-
-  "hero.role":"Professional Technician in Web Programming · Junior Web Developer",
-
-  "about.title":"About Me",
-
-  "about.text":"I am a Professional Technician in Web Programming student at UniEspinal, interested in web development and digital solutions. I am currently improving my programming knowledge, different languages and technological tools.",
-
-  "about.valueLocation":"Espinal, Tolima, Colombia",
-
-  "about.valueLanguages":"Spanish (native) · Basic English",
-
-  "interest.1":"PROGRAMMING",
-
-  "interest.2":"WEB DEVELOPMENT",
-
-  "interest.3":"TECHNOLOGY",
-
-  "interest.4":"INNOVATION",
-
-  "contact.intro":"If you have a project or want to know more about my professional profile, feel free to contact me.",
-
-  "contact.linkedinValue":"Professional profile",
-
-  "footer.note":"Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
-
-};
-
-const DICCIONARIOS = {es:ES,en:EN};
-
-let idiomaActual = "es";
-
-/* =========================
-
-   CAMBIO DE IDIOMA
-
-========================= */
-
-function aplicarIdioma(idioma){
-
-  const textos = DICCIONARIOS[idioma];
-
-  if(!textos) return;
-
-  document.querySelectorAll("[data-i18n]").forEach(elemento=>{
-
-    const clave = elemento.getAttribute("data-i18n");
-
-    if(textos[clave] !== undefined){
-
-      elemento.textContent = textos[clave];
-
-    }
-
-  });
-
-  idiomaActual = idioma;
+    transition: width 1.8s ease-in-out;
 
 }
 
-function cambiarIdioma(){
+.skill {
 
-  aplicarIdioma(idiomaActual === "es" ? "en" : "es");
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:all 0.8s ease;
 
 }
 
-/* =========================
+.skill.mostrar {
 
-   ANIMACIONES DE APARICIÓN
+    opacity:1;
 
-========================= */
+    transform:translateY(0);
+
+}
+
+.progreso span {
+
+    transform:scale(0);
+
+    transition:transform 0.5s ease 1s;
+
+}
+
+.skill.mostrar .progreso span {
+
+    transform:scale(1);
+
+}
+
+==================================================
+
+3. STYLE.CSS - ROBOT PROGRAMADOR
+
+==================================================
+
+.robot-programador {
+
+    position:fixed;
+
+    bottom:25px;
+
+    left:-100px;
+
+    width:70px;
+
+    height:90px;
+
+    z-index:999;
+
+    animation:
+
+    caminar 18s linear infinite,
+
+    saltar 1s ease-in-out infinite;
+
+}
+
+.robot-cabeza {
+
+    width:60px;
+
+    height:45px;
+
+    background:#14b8a6;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.ojo {
+
+    width:10px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+}
+
+.robot-cuerpo {
+
+    width:50px;
+
+    height:35px;
+
+    background:#374151;
+
+    margin:auto;
+
+    border-radius:8px;
+
+}
+
+.robot-piernas {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.robot-piernas span {
+
+    width:10px;
+
+    height:20px;
+
+    background:#14b8a6;
+
+}
+
+@keyframes caminar {
+
+0% {
+
+    left:-100px;
+
+}
+
+50% {
+
+    left:90%;
+
+}
+
+100% {
+
+    left:-100px;
+
+}
+
+}
+
+@keyframes saltar {
+
+0%,100% {
+
+    transform:translateY(0);
+
+}
+
+50% {
+
+    transform:translateY(-10px);
+
+}
+
+}
+
+==================================================
+
+4. SCRIPT.JS
+
+==================================================
+
+Mantener:
+
+- Diccionario ES.
+
+- Diccionario EN.
+
+- Función cambiarIdioma().
+
+- Función aplicarIdioma().
+
+- Función animarHabilidades().
+
+Agregar animación por desplazamiento:
 
 function activarAnimaciones(){
 
-  const elementos = document.querySelectorAll(
+const elementos=document.querySelectorAll(
 
-    ".contenido-seccion, .skill, .interes, .item, .proyecto, .tarjeta, .contenido-banner"
+".contenido-seccion, .skill, .interes, .item, .proyecto, .tarjeta"
 
-  );
+);
 
-  elementos.forEach(elemento=>{
+elementos.forEach(elemento=>{
 
-    elemento.classList.add("animacion-oculta");
-
-  });
-
-  const observador = new IntersectionObserver((entradas, obs)=>{
-
-    entradas.forEach(entrada=>{
-
-      if(entrada.isIntersecting){
-
-        entrada.target.classList.add("mostrar");
-
-        obs.unobserve(entrada.target);
-
-      }
-
-    });
-
-  },{
-
-    threshold:0.15
-
-  });
-
-  elementos.forEach(elemento=>{
-
-    observador.observe(elemento);
-
-  });
-
-}
-
-/* =========================
-
-   BARRAS DE HABILIDADES
-
-========================= */
-
-function animarHabilidades(){
-
- const barras=document.querySelectorAll(".progreso");
-
- barras.forEach(barra=>{
-
-   const porcentaje=barra.getAttribute("data-percent");
-
-   barra.style.width=porcentaje+"%";
-
- });
-
-}
-
-/* =========================
-
-   INICIO
-
-========================= */
-
-document.addEventListener("DOMContentLoaded",()=>{
-
- aplicarIdioma("es");
-
- animarHabilidades();
-
- activarAnimaciones();
+elemento.classList.add("animacion-oculta");
 
 });
+
+const observador=new IntersectionObserver((entradas,obs)=>{
+
+entradas.forEach(entrada=>{
+
+if(entrada.isIntersecting){
+
+entrada.target.classList.add("mostrar");
+
+obs.unobserve(entrada.target);
+
+}
+
+});
+
+},{threshold:0.15});
+
+elementos.forEach(elemento=>{
+
+observador.observe(elemento);
+
+});
+
+}
+
+==================================================
+
+5. ESTADO FINAL DEL PORTAFOLIO
+
+==================================================
+
+Nombre:
+
+Estiven Murcia
+
+Formación:
+
+Técnico Profesional en Programación Web
+
+UniEspinal
+
+Tecnologías:
+
+HTML
+
+CSS
+
+JavaScript
+
+Java
+
+Bases de datos
+
+Redes:
+
+GitHub:
+
+https://github.com/estiven-murcia
+
+LinkedIn:
+
+Perfil profesional
+
+Correo:
+
+estiven42@itfip.edu.co
+
