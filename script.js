@@ -121,7 +121,6 @@ function aplicarIdioma(idioma) {
   const textos = DICCIONARIOS[idioma];
   if (!textos) return;
 
-  // Traducir todos los elementos con la propiedad data-i18n
   document.querySelectorAll("[data-i18n]").forEach(elemento => {
     const clave = elemento.getAttribute("data-i18n");
     if (textos[clave] !== undefined) {
@@ -129,28 +128,22 @@ function aplicarIdioma(idioma) {
     }
   });
 
-  // Cambiar el atributo lang en la etiqueta html para accesibilidad
   document.documentElement.lang = idioma;
   idiomaActual = idioma;
-
-  // Actualizar el estado visual del botón (ES / EN)
-  actualizarBotonIdioma();
+  
+  const spanEs = document.getElementById("idioma-es");
+  const spanEn = document.getElementById("idioma-en");
+  if (spanEs && spanEn) {
+    spanEs.style.opacity = idioma === "es" ? "1" : "0.5";
+    spanEs.style.fontWeight = idioma === "es" ? "bold" : "normal";
+    spanEn.style.opacity = idioma === "en" ? "1" : "0.5";
+    spanEn.style.fontWeight = idioma === "en" ? "bold" : "normal";
+  }
 }
 
 function cambiarIdioma() {
   const nuevoIdioma = idiomaActual === "es" ? "en" : "es";
   aplicarIdioma(nuevoIdioma);
-}
-
-function actualizarBotonIdioma() {
-  const btn = document.getElementById("btn-idioma");
-  if (!btn) return;
-
-  if (idiomaActual === "es") {
-    btn.innerHTML = `<span class="idioma-activo">ES</span><span class="idioma-sep">/</span><span class="idioma-inactivo">EN</span>`;
-  } else {
-    btn.innerHTML = `<span class="idioma-inactivo">ES</span><span class="idioma-sep">/</span><span class="idioma-activo">EN</span>`;
-  }
 }
 
 /* ------------------------------------------------------------
