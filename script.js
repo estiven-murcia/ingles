@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------
-   1. DICCIONARIOS DE IDIOMA
+   1. DICCIONARIOS DE IDIOMA (Corregidos sin "Desarrollador Web Junior")
    ------------------------------------------------------------ */
 const ES = {
   "nav.home": "INICIO",
@@ -129,7 +129,6 @@ function aplicarIdioma(idioma) {
   document.documentElement.lang = idioma;
   idiomaActual = idioma;
 
-  // Actualizar la apariencia visual del botón ES / EN
   const spanEs = document.getElementById("idioma-es");
   const spanEn = document.getElementById("idioma-en");
   
@@ -154,7 +153,7 @@ function cambiarIdioma() {
 }
 
 /* ------------------------------------------------------------
-   3. MENÚ RESPONSIVO
+   3. MENÚ RESPONSIVO Y ANIMACIONES
    ------------------------------------------------------------ */
 let menuVisible = false;
 
@@ -172,9 +171,6 @@ function cerrarMenu() {
   menuVisible = false;
 }
 
-/* ------------------------------------------------------------
-   4. ANIMACIONES
-   ------------------------------------------------------------ */
 function animarHabilidades() {
   const barras = document.querySelectorAll(".progreso");
   barras.forEach(barra => {
@@ -206,7 +202,7 @@ function activarAnimaciones() {
 }
 
 /* ------------------------------------------------------------
-   5. INICIALIZACIÓN
+   4. INICIALIZACIÓN
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   aplicarIdioma("es");
