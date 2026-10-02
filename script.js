@@ -115,7 +115,7 @@ const EN = {
 };
 
 /* ------------------------------------------------------------
-   3. FUNCIONES DE IDIOMA Y MENÚ
+   3. CAMBIO DE IDIOMA
    ------------------------------------------------------------ */
 const DICCIONARIOS = { es: ES, en: EN };
 let idiomaActual = "es";
@@ -123,14 +123,14 @@ let idiomaActual = "es";
 function aplicarIdioma(idioma) {
   const textos = DICCIONARIOS[idioma];
   if (!textos) return;
-  
+
   document.querySelectorAll("[data-i18n]").forEach(elemento => {
     const clave = elemento.getAttribute("data-i18n");
     if (textos[clave] !== undefined) {
       elemento.textContent = textos[clave];
     }
   });
-  
+
   idiomaActual = idioma;
 }
 
@@ -138,6 +138,9 @@ function cambiarIdioma() {
   aplicarIdioma(idiomaActual === "es" ? "en" : "es");
 }
 
+/* ------------------------------------------------------------
+   4. MENÚ RESPONSIVO
+   ------------------------------------------------------------ */
 let menuVisible = false;
 
 function mostrarOcultarMenu() {
@@ -152,7 +155,7 @@ function cerrarMenu() {
 }
 
 /* ------------------------------------------------------------
-   4. ANIMACIONES
+   5. ANIMACIONES
    ------------------------------------------------------------ */
 function animarHabilidades() {
   const barras = document.querySelectorAll(".progreso");
@@ -183,7 +186,7 @@ function activarAnimaciones() {
 }
 
 /* ------------------------------------------------------------
-   5. INICIO DE LA APLICACIÓN
+   6. INICIALIZACIÓN
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   aplicarIdioma("es");
