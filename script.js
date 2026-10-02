@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------
-   1. DICCIONARIOS DE IDIOMA (Corregidos sin "Desarrollador Web Junior")
+   1. DICCIONARIOS DE IDIOMA
    ------------------------------------------------------------ */
 const ES = {
   "nav.home": "INICIO",
@@ -51,7 +51,6 @@ const ES = {
   "contact.title": "Contacto",
   "contact.intro": "Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.",
   "contact.emailLabel": "Correo",
-  "contact.linkedinValue": "Perfil profesional",
   "footer.note": "Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
 };
 
@@ -105,7 +104,6 @@ const EN = {
   "contact.title": "Contact",
   "contact.intro": "If you have a project or would like to learn more about my profile, feel free to contact me.",
   "contact.emailLabel": "Email",
-  "contact.linkedinValue": "Professional Profile",
   "footer.note": "Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
 };
 
