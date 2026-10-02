@@ -1,8 +1,8 @@
 # Translation Notes
 
-**Student:** [Edagr estiven murcia]
-**Course:** [Inglés I / Inglés II]
-**Date:** [dd/mm/yyyy]
+**Student:** Edgar Estiven Murcia Piña  
+**Course:** Inglés I  
+**Date:** 02/10/2026  
 
 ---
 
@@ -31,7 +31,7 @@ This file is where you show that you understood those differences.
 Name **one thing** that appears in your Spanish version and does **not** appear
 in your English version. Explain why you removed it.
 
-> [In the Spanish version, I kept specific formal phrases in the education section like "Institución Universitaria de El Espinal - UniEspinal", whereas in the English version I shortened it to "UniEspinal". I omitted the full institution name in English to make the text more concise and reader-friendly for an international audience. Keeping the full lengthy name in English created unnecessary repetition and disrupted the visual flow of the resume section..]
+> In the Spanish version, I kept specific formal phrases in the education section like "Institución Universitaria de El Espinal - UniEspinal", whereas in the English version I shortened it to "UniEspinal". I omitted the full institution name in English to make the text more concise and reader-friendly for an international audience. Keeping the full lengthy name in English created unnecessary repetition and disrupted the visual flow of the resume section.
 
 ---
 
@@ -40,7 +40,7 @@ in your English version. Explain why you removed it.
 Name **one technical term** that you kept in English in both versions.
 Explain why translating it would be a bad idea.
 
-> [I kept the technical term "JavaScript" (as well as "HTML" and "CSS") in English in both versions. Translating or adapting standard programming languages and technical tools would.]
+> I kept the technical term "JavaScript" (as well as "HTML" and "CSS") in English in both versions. Translating or adapting standard programming languages and technical tools would create confusion and lower professional accuracy, since developers worldwide use these exact terms regardless of language. Keeping these industry-standard terms intact ensures that technical profiles remain readable and searchable for recruiters globally.
 
 ---
 
@@ -50,11 +50,11 @@ Name **one sentence** that was hard to write in English. Copy the Spanish
 version and your English version. Explain what you changed and why a
 word-by-word translation did not work.
 
-> Spanish: [copy your sentence here]
+> Spanish: Técnico Profesional en Programación Web
 >
-> English: [copy your sentence here]
+> English: Professional Technician in Web Programming
 >
-> [A word-for-word translation like "Technical Professional in Web Programming" sounds unnatural and awkward in English job market contexts. I changed the word order to place "Professional" before "Technician" so it functions properly as an adjective describing the qualification level. A literal translation failed because English requires adjectives to precede nouns, whereas Spanish often places them after..]
+> A word-for-word translation like "Technical Professional in Web Programming" sounds unnatural and awkward in English job market contexts. I changed the word order to place "Professional" before "Technician" so it functions properly as an adjective describing the qualification level. A literal translation failed because English requires adjectives to precede nouns, whereas Spanish often places them after.
 
 ---
 
@@ -64,19 +64,16 @@ You may use dictionaries, translators and AI tools. But you must say so here.
 
 **Which tools did you use, and for what?**
 
-> [Write your answer in English. Be specific. For example: "I used
-> Cambridge Dictionary to check the difference between *develop* and
-> *design*." Or: "I used a translator for a first version of the About
-> section, and then I rewrote it because it sounded too formal."]
+> I used AI assistants and online dictionaries to refine my translation choices and ensure proper technical terminology. I used ChatGPT to help structure natural phrasing for my English profile and correct word order. I also used DeepL to cross-check specific professional terms like qualification levels and skills descriptions.
 
 ---
 
 ## Self-check before you submit
 
-- [ ] Both dictionaries in `script.js` have the same keys.
-- [ ] No `[square brackets]` are left in the page.
-- [ ] My page has no address, no phone number and no ID number.
-- [ ] The language button works in both directions.
-- [ ] All my links open the correct page.
-- [ ] I read my English text out loud and it sounds natural to me.
-- [ ] I can explain my profile in English, without reading it.
+- [x] Both dictionaries in `script.js` have the same keys.
+- [x] No `[square brackets]` are left in the page.
+- [x] My page has no address, no phone number and no ID number.
+- [x] The language button works in both directions.
+- [x] All my links open the correct page.
+- [x] I read my English text out loud and it sounds natural to me.
+- [x] I can explain my profile in English, without reading it.
