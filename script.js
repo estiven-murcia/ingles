@@ -1,8 +1,6 @@
-1. STYLE.CSS - AGREGAR AL FINAL DEL ARCHIVO
+1. STYLE.CSS - ROBOT PROGRAMADOR ANIMADO
 
 ==================================================
-
-/* ROBOT PROGRAMADOR ANIMADO */
 
 .robot-programador{
 
@@ -164,13 +162,13 @@
 
 ==================================================
 
-3. SCRIPT.JS - REEMPLAZAR FUNCIÓN animarHabilidades()
+3. SCRIPT.JS - FUNCIÓN ANIMAR HABILIDADES CORREGIDA
 
 ==================================================
 
 function animarHabilidades(){
 
-const barras=document.querySelectorAll(".progreso");
+const habilidades = document.querySelectorAll(".skill");
 
 const observador = new IntersectionObserver((entradas)=>{
 
@@ -178,23 +176,27 @@ entradas.forEach(entrada=>{
 
 if(entrada.isIntersecting){
 
-const barra=entrada.target;
+entrada.target.classList.add("mostrar");
 
-const porcentaje=barra.getAttribute("data-percent");
+const barra = entrada.target.querySelector(".progreso");
 
-barra.style.width=porcentaje+"%";
+if(barra){
+
+const porcentaje = barra.getAttribute("data-percent");
+
+barra.style.width = porcentaje + "%";
+
+}
 
 }
 
 });
 
-},{threshold:0.5});
+},{threshold:0.3});
 
-barras.forEach(barra=>{
+habilidades.forEach(habilidad=>{
 
-barra.style.width="0";
-
-observador.observe(barra);
+observador.observe(habilidad);
 
 });
 
@@ -202,7 +204,7 @@ observador.observe(barra);
 
 ==================================================
 
-4. SCRIPT.JS - FUNCIÓN PARA ANIMACIONES DE ENTRADA
+4. SCRIPT.JS - ANIMACIONES GENERALES
 
 ==================================================
 
@@ -231,3 +233,22 @@ observador.observe(elemento);
 });
 
 }
+
+==================================================
+
+5. IMPORTANTE - DOMCONTENTLOADED
+
+==================================================
+
+Al final del script debe quedar:
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    aplicarIdioma("es");
+
+    animarHabilidades();
+
+    activarAnimaciones();
+
+});
+
