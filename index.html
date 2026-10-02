@@ -1,770 +1,323 @@
-EB PROFILE TEMPLATE  ·  Técnico Profesional en Programación Web
+* ------------------------------------------------------------
 
-  Institución Universitaria de El Espinal - UniEspinal
+   1. SPANISH TEXTS
 
-  Inglés I / Inglés II
+------------------------------------------------------------ */
 
+const ES = {
 
-  ============================================================
+"nav.home":"INICIO",
 
--->
+"nav.about":"SOBRE MÍ",
 
-<html lang="es">
+"nav.skills":"HABILIDADES",
 
-<head>
+"nav.resume":"FORMACIÓN",
 
-  <meta charset="UTF-8">
+"nav.portfolio":"PROYECTOS",
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+"nav.contact":"CONTACTO",
 
-  <!-- [Replace with your name] -->
+"hero.role":"Técnico Profesional en Programación Web · Desarrollador Web Junior",
 
-  <title>Estiven Murcia · Web Developer</title>
+"about.title":"Sobre Mí",
 
-  <meta name="description" content="[One short line about you. Example: Junior web developer and technical support technician based in Colombia.]">
+"about.text":"Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.",
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+"about.infoTitle":"Información",
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+"about.labelLocation":"Ubicación",
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+"about.valueLocation":"Espinal, Tolima, Colombia",
 
-  <link rel="stylesheet" href="style.css">
+"about.labelEmail":"Correo",
 
-</head>
+"about.labelLanguages":"Idiomas",
 
-<body>
+"about.valueLanguages":"Español (nativo) · Inglés básico",
 
-  <!-- ========================= HEADER ========================= -->
+"about.labelStatus":"Disponibilidad",
 
-  <div class="contenedor-header">
+"about.valueStatus":"Abierto a prácticas",
 
-    <header>
+"about.interestsTitle":"Intereses",
 
-      <div class="logo">
+"interest.1":"PROGRAMACIÓN",
 
-        <!-- [Replace with your name or a short nickname] -->
+"interest.2":"DESARROLLO WEB",
 
-        <a href="#inicio">Estiven Murcia</a>
+"interest.3":"TECNOLOGÍA",
 
-      </div>
+"interest.4":"INNOVACIÓN",
 
-      <nav id="nav">
+"skills.title":"Habilidades",
 
-        <ul>
+"skills.technical":"Habilidades técnicas",
 
-          <li><a href="#inicio"     data-i18n="nav.home"      onclick="cerrarMenu()">INICIO</a></li>
+"skills.professional":"Habilidades profesionales",
 
-          <li><a href="#sobremi"    data-i18n="nav.about"     onclick="cerrarMenu()">SOBRE MÍ</a></li>
+"skill.support":"Soporte al usuario",
 
-          <li><a href="#skills"     data-i18n="nav.skills"    onclick="cerrarMenu()">SKILLS</a></li>
+"skill.teamwork":"Trabajo en equipo",
 
-          <li><a href="#curriculum" data-i18n="nav.resume"    onclick="cerrarMenu()">FORMACIÓN</a></li>
+"skill.problem":"Resolución de problemas",
 
-          <li><a href="#portfolio"  data-i18n="nav.portfolio" onclick="cerrarMenu()">PROYECTOS</a></li>
+"skill.english":"Inglés técnico",
 
-          <li><a href="#contacto"   data-i18n="nav.contact"   onclick="cerrarMenu()">CONTACTO</a></li>
+"resume.title":"Formación y experiencia",
 
-        </ul>
+"resume.education":"Formación",
 
-      </nav>
+"resume.experience":"Experiencia",
 
-      <div class="acciones-header">
+"edu.1.title":"Técnico Profesional en Programación Web",
 
-        <!-- LANGUAGE SWITCHER -->
+"edu.1.text":"Formación enfocada en aprender los fundamentos de la programación, diferentes lenguajes de programación y herramientas tecnológicas, fortaleciendo las bases necesarias para el desarrollo web y la creación de soluciones digitales.",
 
-        <button id="btn-idioma"
+"edu.2.title":"Fundamentos de Programación",
 
-                class="btn-idioma"
+"edu.2.text":"Aprendizaje de conceptos básicos de programación y herramientas tecnológicas.",
 
-                type="button"
+"exp.1.title":"Desarrollo de proyectos académicos web",
 
-                onclick="cambiarIdioma()"
+"exp.1.text":"Participación en proyectos académicos aplicando conocimientos básicos de HTML, CSS, JavaScript y Java.",
 
-                aria-label="Switch to English">
+"exp.2.title":"Práctica personal de programación",
 
-          <span class="idioma-activo">ES</span><span class="idioma-sep">/</span><span class="idioma-inactivo">EN</span>
+"exp.2.text":"Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.",
 
-        </button>
+"portfolio.title":"Proyectos",
 
-        <button class="nav-responsive" type="button" onclick="mostrarOcultarMenu()" aria-label="Menu">
+"project.1.title":"Proyecto Web Personal",
 
-          <i class="fa-solid fa-bars"></i>
+"project.1.text":"HTML · CSS · JavaScript",
 
-        </button>
+"project.2.title":"Aplicación Web Académica",
 
-      </div>
+"project.2.text":"JavaScript · Desarrollo Web",
 
-    </header>
+"project.3.title":"Prácticas de Programación",
 
-  </div>
+"project.3.text":"Java · Fundamentos de programación",
 
-  <!-- ========================= HERO ========================= -->
+"contact.title":"Contacto",
 
-  <section id="inicio" class="inicio">
+"contact.intro":"Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.",
 
-    <div class="contenido-banner">
+"contact.emailLabel":"Correo",
 
-      <div class="contenedor-img">
+"contact.linkedinValue":"Perfil profesional",
 
-        <!-- [Replace profile.jpg with your own photo. Square image works best.] -->
+"footer.note":"Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
 
-        <img src="images/profile.jpg" alt="Profile photo" onerror="this.style.display='none'">
+};
 
-      </div>
+/* ------------------------------------------------------------
 
-      <!-- [Replace with your full name] -->
+   2. ENGLISH TEXTS
 
-      <h1>Estiven Murcia</h1>
+------------------------------------------------------------ */
 
-      <h2 data-i18n="hero.role">Desarrollador Web · Soporte Técnico</h2>
+const EN = {
 
-     <div class="redes">
+"nav.home":"HOME",
 
-<a href="https://github.com/estiven-murcia" 
+"nav.about":"ABOUT",
 
-aria-label="GitHub"
+"nav.skills":"SKILLS",
 
-target="_blank">
+"nav.resume":"RESUME",
 
-<i class="fa-brands fa-github"></i>
+"nav.portfolio":"PROJECTS",
 
-</a>
+"nav.contact":"CONTACT",
 
-<a href="https://www.linkedin.com/in/edgar-estiven-murcia-piña-996a513b1/"
+"hero.role":"Professional Technician in Web Programming · Junior Web Developer",
 
-aria-label="LinkedIn"
+"about.title":"About Me",
 
-target="_blank">
+"about.text":"I am a Professional Technician in Web Programming student at UniEspinal, interested in web development and digital solutions. I am currently improving my programming knowledge, different programming languages and technological tools.",
 
-<i class="fa-brands fa-linkedin-in"></i>
+"about.infoTitle":"Information",
 
-</a>
+"about.labelLocation":"Location",
 
-<a href="mailto:estiven42@itfip.edu.co"
+"about.valueLocation":"Espinal, Tolima, Colombia",
 
-aria-label="Email">
+"about.labelEmail":"Email",
 
-<i class="fa-solid fa-envelope"></i>
+"about.labelLanguages":"Languages",
 
-</a>
+"about.valueLanguages":"Spanish (native) · Basic English",
 
-</div>
+"about.labelStatus":"Availability",
 
-  </section>
+"about.valueStatus":"Open to internships",
 
-  <!-- ========================= ABOUT ========================= -->
+"about.interestsTitle":"Interests",
 
-  <section id="sobremi" class="sobremi">
+"interest.1":"PROGRAMMING",
 
-    <div class="contenido-seccion">
+"interest.2":"WEB DEVELOPMENT",
 
-      <h2 data-i18n="about.title">Sobre Mí</h2>
+"interest.3":"TECHNOLOGY",
 
-      <p data-i18n="about.text">
+"interest.4":"INNOVATION",
 
-        [Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal. 
+"skills.title":"Skills",
 
-     con interés en el desarrollo web y la creación de soluciones digitales. 
+"skills.technical":"Technical skills",
 
-.]
+"skills.professional":"Professional skills",
 
-      </p>
+"skill.support":"User support",
 
-      <div class="fila">
+"skill.teamwork":"Teamwork",
 
-        <div class="col">
+"skill.problem":"Problem solving",
 
-          <h3 data-i18n="about.infoTitle">Información</h3>
+"skill.english":"Technical English",
 
-          <!--
+"resume.title":"Education and experience",
 
-            SAFE FIELDS ONLY.
+"resume.education":"Education",
 
-            Do not add: home address, phone number, ID number, date of birth.
+"resume.experience":"Experience",
 
-          -->
+"edu.1.title":"Professional Technician in Web Programming",
 
-          <ul class="datos">
+"edu.1.text":"Training focused on learning programming fundamentals, different programming languages and technological tools.",
 
-            <li>
+"portfolio.title":"Projects",
 
-              <strong data-i18n="about.labelLocation">Ubicación</strong>
+"contact.title":"Contact",
 
-              <span data-i18n="about.valueLocation">Espinal, Tolima, Colombia</span>
+"contact.intro":"If you have a project or want to know more about my professional profile, feel free to contact me.",
 
-            </li>
+"contact.emailLabel":"Email",
 
-            <li>
+"contact.linkedinValue":"Professional profile",
 
-              <strong data-i18n="about.labelEmail">Correo</strong>
+"footer.note":"Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
 
-              <span>estiven42@itfip.edu.co</span>
+};
 
-            </li>
+/* LANGUAGE SWITCHER */
 
-            <li>
+const DICCIONARIOS = { es: ES, en: EN };
 
-              <strong data-i18n="about.labelLanguages">Idiomas</strong>
+let idiomaActual = "es";
 
-              <span data-i18n="about.valueLanguages">Español (nativo) · Inglés básico</span>
+function aplicarIdioma(idioma){
 
-            </li>
+const textos=DICCIONARIOS[idioma];
 
-            <li>
+if(!textos)return;
 
-              <strong data-i18n="about.labelStatus">Disponibilidad</strong>
+document.querySelectorAll("[data-i18n]").forEach(elemento=>{
 
-              <span class="destacado" data-i18n="about.valueStatus">Abierto a prácticas</span>
+const clave=elemento.getAttribute("data-i18n");
 
-            </li>
+if(textos[clave]!==undefined){
 
-          </ul>
+elemento.textContent=textos[clave];
 
-        </div>
+}
 
-        <div class="col">
+});
 
-          <h3 data-i18n="about.interestsTitle">Intereses</h3>
+idiomaActual=idioma;
 
-          <div class="contenedor-intereses">
+}
 
-            <!-- [Change icons and labels. Keep between 4 and 6.] -->
+function cambiarIdioma(){
 
-            <div class="interes">
+aplicarIdioma(idiomaActual==="es"?"en":"es");
 
-              <i class="fa-solid fa-code"></i>
+}
 
-              <span data-i18n="interest.1">PROGRAMACIÓN</span>
+/* MENU */
 
-            </div>
+let menuVisible=false;
 
-            <div class="interes">
+function mostrarOcultarMenu(){
 
-              <i class="fa-solid fa-headset"></i>
+const nav=document.getElementById("nav");
 
-              <span data-i18n="interest.2">Desarrollo web</span>
+menuVisible=!menuVisible;
 
-            </div>
+nav.className=menuVisible?"responsive":"";
 
-            <div class="interes">
+}
 
-              <i class="fa-solid fa-book-open"></i>
+function cerrarMenu(){
 
-              <span data-i18n="interest.3">TECNOLOGÍA</span>
+document.getElementById("nav").className="";
 
-            </div>
+menuVisible=false;
 
-            <div class="interes">
+}
 
-              <i class="fa-solid fa-gamepad"></i>
+/* ANIMACION HABILIDADES */
 
-              <span data-i18n="interest.4">INNOVACIÓN</span>
+function animarHabilidades(){
 
-            </div>
+const barras=document.querySelectorAll(".progreso");
 
-          </div>
+barras.forEach(barra=>{
 
-        </div>
+barra.style.width="0";
 
-      </div>
+setTimeout(()=>{
 
-    </div>
+const porcentaje=barra.getAttribute("data-percent");
 
-  </section>
+barra.style.width=porcentaje+"%";
 
-  <!-- ========================= SKILLS ========================= -->
+},500);
 
-  <!--
+});
 
-    To change a skill: edit the label, and edit data-percent.
+}
 
-    The bar width and the number are both taken from data-percent,
+/* ANIMACIONES GENERALES */
 
-    so you only change it in ONE place.
+function activarAnimaciones(){
 
-  -->
+const elementos=document.querySelectorAll(".contenido-seccion,.item,.skill,.tarjeta,.proyecto");
 
-  <section id="skills" class="skills">
+const observador=new IntersectionObserver((entradas)=>{
 
-    <div class="contenido-seccion">
+entradas.forEach(entrada=>{
 
-      <h2 data-i18n="skills.title">Habilidades</h2>
+if(entrada.isIntersecting){
 
-      <div class="fila">
+entrada.target.classList.add("animacion-visible");
 
-        <!-- HABILIDADES TÉCNICAS -->
+}
 
-        <div class="col">
+});
 
-          <h3 data-i18n="skills.technical">Habilidades técnicas</h3>
+},{threshold:0.15});
 
-          <div class="skill">
+elementos.forEach(elemento=>{
 
-            <span class="skill-nombre">HTML &amp; CSS</span>
+elemento.classList.add("animacion-oculta");
 
-            <div class="barra-skill">
+observador.observe(elemento);
 
-              <div class="progreso" data-percent="65">
+});
 
-                <span>65%</span>
+}
 
-              </div>
+/* START */
 
-            </div>
+document.addEventListener("DOMContentLoaded",()=>{
 
-          </div>
+aplicarIdioma("es");
 
-          <div class="skill">
+animarHabilidades();
 
-            <span class="skill-nombre">JavaScript</span>
+activarAnimaciones();
 
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="45">
-
-                <span>45%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="skill">
-
-            <span class="skill-nombre">Java</span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="40">
-
-                <span>40%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="skill">
-
-            <span class="skill-nombre">Bases de datos</span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="35">
-
-                <span>35%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- HABILIDADES PROFESIONALES -->
-
-        <div class="col">
-
-          <h3 data-i18n="skills.professional">Habilidades profesionales</h3>
-
-          <div class="skill">
-
-            <span class="skill-nombre" data-i18n="skill.support">
-
-              Soporte al usuario
-
-            </span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="75">
-
-                <span>75%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="skill">
-
-            <span class="skill-nombre" data-i18n="skill.teamwork">
-
-              Trabajo en equipo
-
-            </span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="85">
-
-                <span>85%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="skill">
-
-            <span class="skill-nombre" data-i18n="skill.problem">
-
-              Resolución de problemas
-
-            </span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="75">
-
-                <span>75%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="skill">
-
-            <span class="skill-nombre" data-i18n="skill.english">
-
-              Inglés técnico
-
-            </span>
-
-            <div class="barra-skill">
-
-              <div class="progreso" data-percent="35">
-
-                <span>35%</span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-</section>
-
-  <!-- ========================= RESUME ========================= -->
-
-  <section id="curriculum" class="curriculum">
-
-    <div class="contenido-seccion">
-
-      <h2 data-i18n="resume.title">Formación y experiencia</h2>
-
-      <div class="fila">
-
-        <!-- EDUCATION -->
-
-        <div class="col izquierda">
-
-          <h3 data-i18n="resume.education">Formación</h3>
-
-          <div class="item izq">
-
-            <h4 data-i18n="edu.1.title">Técnico Profesional en Programación Web</h4>
-
-            <span class="casa">UniEspinal</span>
-
-            <span class="fecha">2025 - 2027</span>
-
-            <p data-i18n="edu.1.text">[ Formación enfocada en aprender los fundamentos de la programación,
-
-    diferentes lenguajes de programación y herramientas tecnológicas,
-
-    fortaleciendo las bases necesarias para el desarrollo web y la creación
-
-    de soluciones digitales.]</p>
-
-            <div class="conectori"><div class="circuloi"></div></div>
-
-          </div>
-
-          <div class="item izq">
-
-            <h4 data-i18n="edu.2.title">Fundamentos de Programación</h4>
-
-            <span class="casa">UniEspinal</span>
-
-            <span class="fecha">[Año]</span>
-
-            <p data-i18n="edu.2.text">[Qué aprendiste y para qué te sirve.]</p>
-
-            <div class="conectori"><div class="circuloi"></div></div>
-
-          </div>
-
-        </div>
-
-        <!-- EXPERIENCE -->
-
-        <div class="col derecha">
-
-          <h3 data-i18n="resume.experience">Experiencia</h3>
-
-          <!--
-
-            No work experience yet? That is normal.
-
-            Use academic projects, volunteer work or freelance jobs.
-
-            Describe what you DID, using action verbs: built, configured, fixed, tested.
-
-          -->
-
-          <div class="item der">
-
-            <h4 data-i18n="exp.1.title">[Rol o tipo de proyecto]</h4>
-
-            <span class="casa">[Empresa, institución o proyecto propio]</span>
-
-            <span class="fecha">[Año]</span>
-
-            <p data-i18n="exp.1.text">[Qué hiciste, con qué herramientas y qué resultado tuvo.]</p>
-
-            <div class="conectord"><div class="circulod"></div></div>
-
-          </div>
-
-          <div class="item der">
-
-            <h4 data-i18n="exp.2.title">[Rol o tipo de proyecto]</h4>
-
-            <span class="casa">[Empresa, institución o proyecto propio]</span>
-
-            <span class="fecha">[Año]</span>
-
-            <p data-i18n="exp.2.text">[Qué hiciste, con qué herramientas y qué resultado tuvo.]</p>
-
-            <div class="conectord"><div class="circulod"></div></div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= PORTFOLIO ========================= -->
-
-  <!--
-
-    This is the most important section for a junior developer.
-
-    Three finished small projects are better than ten unfinished ones.
-
-    Every card should link to the live project or to its repository.
-
-  -->
-
-  <section id="portfolio" class="portfolio">
-
-    <div class="contenido-seccion">
-
-      <h2 data-i18n="portfolio.title">Proyectos</h2>
-
-      <div class="galeria">
-
-        <a class="proyecto" href="#" target="_blank" rel="noopener">
-
-          <img src="images/project-1.png" alt="Project 1" onerror="this.style.opacity=0">
-
-          <div class="overlay">
-
-            <h3 data-i18n="project.1.title">[Nombre del proyecto]</h3>
-
-            <p data-i18n="project.1.text">[Tecnologías usadas]</p>
-
-          </div>
-
-        </a>
-
-        <a class="proyecto" href="#" target="_blank" rel="noopener">
-
-          <img src="images/project-2.png" alt="Project 2" onerror="this.style.opacity=0">
-
-          <div class="overlay">
-
-            <h3 data-i18n="project.2.title">[Nombre del proyecto]</h3>
-
-            <p data-i18n="project.2.text">[Tecnologías usadas]</p>
-
-          </div>
-
-        </a>
-
-        <a class="proyecto" href="#" target="_blank" rel="noopener">
-
-          <img src="images/project-3.png" alt="Project 3" onerror="this.style.opacity=0">
-
-          <div class="overlay">
-
-            <h3 data-i18n="project.3.title">[Nombre del proyecto]</h3>
-
-            <p data-i18n="project.3.text">[Tecnologías usadas]</p>
-
-          </div>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= CONTACT ========================= -->
-
-  <!--
-
-    A contact form needs a server to work. This template uses direct links
-
-    instead, so nothing here is decorative: every button really does something.
-
-  -->
-
-<div class="tarjetas-contacto">
-
-  <!-- CORREO -->
-
-  <a class="tarjeta" 
-
-     href="mailto:estiven42@itfip.edu.co">
-
-    <i class="fa-solid fa-envelope"></i>
-
-    <strong data-i18n="contact.emailLabel">
-
-      Correo
-
-    </strong>
-
-    <span>
-
-      estiven42@itfip.edu.co
-
-    </span>
-
-  </a>
-
-  <!-- GITHUB -->
-
-  <a class="tarjeta" 
-
-     href="https://github.com/estiven-murcia" 
-
-     target="_blank" 
-
-     rel="noopener">
-
-    <i class="fa-brands fa-github"></i>
-
-    <strong>
-
-      GitHub
-
-    </strong>
-
-    <span>
-
-      github.com/estiven-murcia
-
-    </span>
-
-  </a>
-
-  <!-- LINKEDIN -->
-
-  <a class="tarjeta" 
-
-     href="https://www.linkedin.com/in/edgar-estiven-murcia-piña-996a513b1/" 
-
-     target="_blank" 
-
-     rel="noopener">
-
-    <i class="fa-brands fa-linkedin-in"></i>
-
-    <strong>
-
-      LinkedIn
-
-    </strong>
-
-    <span data-i18n="contact.linkedinValue">
-
-      Perfil profesional
-
-    </span>
-
-  </a>
-
-</div>
-
-  <!-- ========================= FOOTER ========================= -->
-
-  <footer>
-
-    <a href="#inicio" class="arriba" aria-label="Back to top">
-
-      <i class="fa-solid fa-angles-up"></i>
-
-    </a>
-
-    <p class="footer-nota" data-i18n="footer.note">
-
-      Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal
-
-    </p>
-
-  </footer>
-
-  
-
-<!-- ========================= ROBOT ANIMADO ========================= -->
-
-<div class="robot-programador">
-
-  <div class="robot-cabeza">
-
-    <div class="ojo"></div>
-
-    <div class="ojo"></div>
-
-  </div>
-
-  <div class="robot-cuerpo"></div>
-
-  <div class="robot-piernas">
-
-    <span></span>
-
-    <span></span>
-
-  </div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+});
