@@ -1,29 +1,29 @@
-/* ============================================================
-   DICCIONARIOS DE TRADUCCIÓN (Estiven Murcia)
-   ============================================================ */
+/* ------------------------------------------------------------
+   1. SPANISH TEXTS
+   ------------------------------------------------------------ */
 const ES = {
   "nav.home": "INICIO",
   "nav.about": "SOBRE MÍ",
-  "nav.skills": "SKILLS",
+  "nav.skills": "HABILIDADES",
   "nav.resume": "FORMACIÓN",
   "nav.portfolio": "PROYECTOS",
   "nav.contact": "CONTACTO",
-  "hero.role": "Desarrollador Web · Soporte Técnico",
+  "hero.role": "Técnico Profesional en Programación Web · Desarrollador Web Junior",
   "about.title": "Sobre Mí",
-  "about.text": "Hola, soy Estiven Murcia. Estudiante entusiasta de programación web y soporte técnico, enfocado en crear aplicaciones funcionales y brindar soluciones tecnológicas eficaces.",
+  "about.text": "Soy estudiante de Técnico Profesional en Programación Web en la Institución Universitaria de El Espinal - UniEspinal, con interés en el desarrollo web y la creación de soluciones digitales. Actualmente estoy fortaleciendo mis conocimientos en programación, diferentes lenguajes y herramientas tecnológicas.",
   "about.infoTitle": "Información",
   "about.labelLocation": "Ubicación",
-  "about.valueLocation": "El Espinal, Tolima, Colombia",
+  "about.valueLocation": "Espinal, Tolima, Colombia",
   "about.labelEmail": "Correo",
   "about.labelLanguages": "Idiomas",
-  "about.valueLanguages": "Español (nativo) · Inglés (Técnico / B1)",
+  "about.valueLanguages": "Español (nativo) · Inglés básico",
   "about.labelStatus": "Disponibilidad",
   "about.valueStatus": "Abierto a prácticas",
   "about.interestsTitle": "Intereses",
-  "interest.1": "CÓDIGO",
-  "interest.2": "SOPORTE",
-  "interest.3": "LECTURA",
-  "interest.4": "JUEGOS",
+  "interest.1": "PROGRAMACIÓN",
+  "interest.2": "DESARROLLO WEB",
+  "interest.3": "TECNOLOGÍA",
+  "interest.4": "INNOVACIÓN",
   "skills.title": "Habilidades",
   "skills.technical": "Habilidades técnicas",
   "skills.professional": "Habilidades profesionales",
@@ -33,169 +33,159 @@ const ES = {
   "skill.english": "Inglés técnico",
   "resume.title": "Formación y experiencia",
   "resume.education": "Formación",
-  "edu.1.title": "Técnico Profesional en Programación Web",
-  "edu.1.text": "Formación técnica enfocada en desarrollo web frontend y backend, bases de datos y arquitectura de software.",
-  "edu.2.title": "Cursos de Soporte y Desarrollo",
-  "edu.2.text": "Capacitaciones autónomas en mantenimiento de equipos, redes y fundamentos de programación.",
   "resume.experience": "Experiencia",
-  "exp.1.title": "Proyectos Académicos Web",
-  "exp.1.text": "Desarrollo de sitios web interactivos usando HTML5, CSS3 y JavaScript con diseño adaptable (responsive).",
-  "exp.2.title": "Soporte Técnico Informático",
-  "exp.2.text": "Mantenimiento preventivo/correctivo de hardware y software, además de configuración de redes locales.",
+  "edu.1.title": "Técnico Profesional en Programación Web",
+  "edu.1.text": "Formación enfocada en aprender los fundamentos de la programación, diferentes lenguajes de programación y herramientas tecnológicas, fortaleciendo las bases necesarias para el desarrollo web y la creación de soluciones digitales.",
+  "edu.2.title": "Fundamentos de Programación",
+  "edu.2.text": "Aprendizaje de conceptos básicos de programación y herramientas tecnológicas.",
+  "exp.1.title": "Desarrollo de proyectos académicos web",
+  "exp.1.text": "Participación en proyectos académicos aplicando conocimientos básicos de HTML, CSS, JavaScript y Java.",
+  "exp.2.title": "Práctica personal de programación",
+  "exp.2.text": "Fortalecimiento continuo de habilidades mediante ejercicios de programación y desarrollo web.",
   "portfolio.title": "Proyectos",
-  "project.1.title": "Sitio Web Responsive",
-  "project.1.text": "HTML5 / CSS3 / JS",
-  "project.2.title": "Sistema de Gestión",
-  "project.2.text": "JavaScript / MySQL",
-  "project.3.title": "Portafolio Personal",
-  "project.3.text": "HTML / CSS / JS i18n",
+  "project.1.title": "Proyecto Web Personal",
+  "project.1.text": "HTML · CSS · JavaScript",
+  "project.2.title": "Aplicación Web Académica",
+  "project.2.text": "JavaScript · Desarrollo Web",
+  "project.3.title": "Prácticas de Programación",
+  "project.3.text": "Java · Fundamentos de programación",
   "contact.title": "Contacto",
-  "contact.intro": "¡Gracias por visitar mi portafolio! Si deseas contactarme para proyectos o prácticas, escríbeme.",
+  "contact.intro": "Si tienes un proyecto o deseas conocer más sobre mi perfil profesional, puedes contactarme.",
   "contact.emailLabel": "Correo",
-  "contact.linkedinValue": "Estiven Murcia",
+  "contact.linkedinValue": "Perfil profesional",
   "footer.note": "Estiven Murcia · Técnico Profesional en Programación Web · UniEspinal"
 };
 
+/* ------------------------------------------------------------
+   2. ENGLISH TEXTS
+   ------------------------------------------------------------ */
 const EN = {
   "nav.home": "HOME",
-  "nav.about": "ABOUT ME",
+  "nav.about": "ABOUT",
   "nav.skills": "SKILLS",
-  "nav.resume": "EDUCATION",
+  "nav.resume": "RESUME",
   "nav.portfolio": "PROJECTS",
   "nav.contact": "CONTACT",
-  "hero.role": "Web Developer · IT Technical Support",
+  "hero.role": "Professional Technician in Web Programming · Junior Web Developer",
   "about.title": "About Me",
-  "about.text": "Hello, I am Estiven Murcia. Enthusiastic web development and technical support student focused on building functional web applications and delivering effective tech solutions.",
+  "about.text": "I am a Professional Technician in Web Programming student at UniEspinal, interested in web development and digital solutions. I am currently improving my programming knowledge, different programming languages and technological tools.",
   "about.infoTitle": "Information",
   "about.labelLocation": "Location",
-  "about.valueLocation": "El Espinal, Tolima, Colombia",
+  "about.valueLocation": "Espinal, Tolima, Colombia",
   "about.labelEmail": "Email",
   "about.labelLanguages": "Languages",
-  "about.valueLanguages": "Spanish (Native) · English (Technical / B1)",
+  "about.valueLanguages": "Spanish (native) · Basic English",
   "about.labelStatus": "Availability",
-  "about.valueStatus": "Open for internships",
+  "about.valueStatus": "Open to internships",
   "about.interestsTitle": "Interests",
-  "interest.1": "CODING",
-  "interest.2": "SUPPORT",
-  "interest.3": "READING",
-  "interest.4": "GAMING",
+  "interest.1": "PROGRAMMING",
+  "interest.2": "WEB DEVELOPMENT",
+  "interest.3": "TECHNOLOGY",
+  "interest.4": "INNOVATION",
   "skills.title": "Skills",
-  "skills.technical": "Technical Skills",
-  "skills.professional": "Professional Skills",
-  "skill.support": "User Support",
+  "skills.technical": "Technical skills",
+  "skills.professional": "Professional skills",
+  "skill.support": "User support",
   "skill.teamwork": "Teamwork",
-  "skill.problem": "Problem Solving",
+  "skill.problem": "Problem solving",
   "skill.english": "Technical English",
-  "resume.title": "Education & Experience",
+  "resume.title": "Education and experience",
   "resume.education": "Education",
-  "edu.1.title": "Technical Degree in Web Programming",
-  "edu.1.text": "Technical education focused on frontend/backend web development, databases, and software architecture.",
-  "edu.2.title": "IT Support & Dev Courses",
-  "edu.2.text": "Self-paced training in computer maintenance, networking, and programming fundamentals.",
   "resume.experience": "Experience",
-  "exp.1.title": "Academic Web Projects",
-  "exp.1.text": "Development of interactive websites using HTML5, CSS3, and JavaScript with responsive design.",
-  "exp.2.title": "IT Technical Support",
-  "exp.2.text": "Preventive and corrective maintenance of hardware/software and local network configuration.",
+  "edu.1.title": "Professional Technician in Web Programming",
+  "edu.1.text": "Training focused on learning programming fundamentals, different programming languages and technological tools.",
+  "edu.2.title": "Programming Fundamentals",
+  "edu.2.text": "Learning basic concepts of programming and technological tools.",
+  "exp.1.title": "Development of Academic Web Projects",
+  "exp.1.text": "Participation in academic projects applying basic knowledge of HTML, CSS, JavaScript, and Java.",
+  "exp.2.title": "Personal Programming Practice",
+  "exp.2.text": "Continuous improvement of skills through programming exercises and web development.",
   "portfolio.title": "Projects",
-  "project.1.title": "Responsive Website",
-  "project.1.text": "HTML5 / CSS3 / JS",
-  "project.2.title": "Management System",
-  "project.2.text": "JavaScript / MySQL",
-  "project.3.title": "Personal Portfolio",
-  "project.3.text": "HTML / CSS / JS i18n",
+  "project.1.title": "Personal Web Project",
+  "project.1.text": "HTML · CSS · JavaScript",
+  "project.2.title": "Academic Web Application",
+  "project.2.text": "JavaScript · Web Development",
+  "project.3.title": "Programming Practices",
+  "project.3.text": "Java · Programming Fundamentals",
   "contact.title": "Contact",
-  "contact.intro": "Thank you for visiting my portfolio! Feel free to reach out for opportunities or collaborations.",
+  "contact.intro": "If you have a project or want to know more about my professional profile, feel free to contact me.",
   "contact.emailLabel": "Email",
-  "contact.linkedinValue": "Estiven Murcia",
-  "footer.note": "Estiven Murcia · Technical Degree in Web Programming · UniEspinal"
+  "contact.linkedinValue": "Professional profile",
+  "footer.note": "Estiven Murcia · Professional Technician in Web Programming · UniEspinal"
 };
 
-/* ============================================================
-   FUNCIONES DE NAVEGACIÓN Y MULTIIDIOMA
-   ============================================================ */
+/* ------------------------------------------------------------
+   3. FUNCIONES DE IDIOMA Y MENÚ
+   ------------------------------------------------------------ */
 const DICCIONARIOS = { es: ES, en: EN };
 let idiomaActual = "es";
 
-function aplicarIdioma(idioma){
+function aplicarIdioma(idioma) {
   const textos = DICCIONARIOS[idioma];
-  if(!textos) return;
-  document.querySelectorAll("[data-i18n]").forEach(elemento=>{
+  if (!textos) return;
+  
+  document.querySelectorAll("[data-i18n]").forEach(elemento => {
     const clave = elemento.getAttribute("data-i18n");
-    if(textos[clave] !== undefined){
+    if (textos[clave] !== undefined) {
       elemento.textContent = textos[clave];
     }
   });
   
-  // Actualizar clases activas del botón de idioma
-  const btnIdioma = document.getElementById("btn-idioma");
-  if(btnIdioma) {
-    const spanEs = btnIdioma.querySelector(".idioma-activo");
-    const spanEn = btnIdioma.querySelector(".idioma-inactivo");
-    if(spanEs && spanEn) {
-      if(idioma === "es") {
-        spanEs.style.fontWeight = "bold";
-        spanEn.style.fontWeight = "normal";
-      } else {
-        spanEs.style.fontWeight = "normal";
-        spanEn.style.fontWeight = "bold";
-      }
-    }
-  }
-  
   idiomaActual = idioma;
 }
 
-function cambiarIdioma(){
+function cambiarIdioma() {
   aplicarIdioma(idiomaActual === "es" ? "en" : "es");
 }
 
 let menuVisible = false;
-function mostrarOcultarMenu(){
+
+function mostrarOcultarMenu() {
   const nav = document.getElementById("nav");
   menuVisible = !menuVisible;
   nav.className = menuVisible ? "responsive" : "";
 }
 
-function cerrarMenu(){
+function cerrarMenu() {
   document.getElementById("nav").className = "";
   menuVisible = false;
 }
 
-/* CORRECCION DE BARRAS DE HABILIDADES */
-function animarHabilidades(){
+/* ------------------------------------------------------------
+   4. ANIMACIONES
+   ------------------------------------------------------------ */
+function animarHabilidades() {
   const barras = document.querySelectorAll(".progreso");
-  barras.forEach(barra=>{
+  barras.forEach(barra => {
     barra.style.width = "0%";
-    setTimeout(()=>{
+    setTimeout(() => {
       const porcentaje = barra.getAttribute("data-percent");
       barra.style.width = porcentaje + "%";
-    }, 300);
+    }, 500);
   });
 }
 
-/* ANIMACIONES DE ENTRADA CON INTERSECTION OBSERVER */
-function activarAnimaciones(){
-  const elementos = document.querySelectorAll(
-    ".contenido-seccion, .item, .skill, .tarjeta, .proyecto"
-  );
+function activarAnimaciones() {
+  const elementos = document.querySelectorAll(".contenido-seccion, .item, .skill, .tarjeta, .proyecto");
   
-  const observador = new IntersectionObserver((entradas)=>{
-    entradas.forEach(entrada=>{
-      if(entrada.isIntersecting){
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
         entrada.target.classList.add("animacion-visible");
       }
     });
-  },{threshold: 0.15});
+  }, { threshold: 0.15 });
 
-  elementos.forEach(elemento=>{
+  elementos.forEach(elemento => {
     elemento.classList.add("animacion-oculta");
     observador.observe(elemento);
   });
 }
 
-/* INICIALIZACIÓN CUANDO EL DOM ESTÁ LISTO */
-document.addEventListener("DOMContentLoaded", ()=>{
+/* ------------------------------------------------------------
+   5. INICIO DE LA APLICACIÓN
+   ------------------------------------------------------------ */
+document.addEventListener("DOMContentLoaded", () => {
   aplicarIdioma("es");
   animarHabilidades();
   activarAnimaciones();
