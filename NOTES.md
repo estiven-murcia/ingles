@@ -1,6 +1,6 @@
 # Translation Notes
 
-**Student:** [Your name]
+**Student:** [Edagr estiven murcia]
 **Course:** [Inglés I / Inglés II]
 **Date:** [dd/mm/yyyy]
 
@@ -31,7 +31,7 @@ This file is where you show that you understood those differences.
 Name **one thing** that appears in your Spanish version and does **not** appear
 in your English version. Explain why you removed it.
 
-> [Write 2–4 sentences in English.]
+> [In the Spanish version, I kept specific formal phrases in the education section like "Institución Universitaria de El Espinal - UniEspinal", whereas in the English version I shortened it to "UniEspinal". I omitted the full institution name in English to make the text more concise and reader-friendly for an international audience. Keeping the full lengthy name in English created unnecessary repetition and disrupted the visual flow of the resume section..]
 
 ---
 
@@ -40,7 +40,7 @@ in your English version. Explain why you removed it.
 Name **one technical term** that you kept in English in both versions.
 Explain why translating it would be a bad idea.
 
-> [Write 2–4 sentences in English.]
+> [I kept the technical term "JavaScript" (as well as "HTML" and "CSS") in English in both versions. Translating or adapting standard programming languages and technical tools would.]
 
 ---
 
@@ -54,7 +54,7 @@ word-by-word translation did not work.
 >
 > English: [copy your sentence here]
 >
-> [Write 2–4 sentences in English explaining the change.]
+> [A word-for-word translation like "Technical Professional in Web Programming" sounds unnatural and awkward in English job market contexts. I changed the word order to place "Professional" before "Technician" so it functions properly as an adjective describing the qualification level. A literal translation failed because English requires adjectives to precede nouns, whereas Spanish often places them after..]
 
 ---
 
