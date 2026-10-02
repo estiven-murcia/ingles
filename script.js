@@ -121,7 +121,6 @@ function aplicarIdioma(idioma) {
   const textos = DICCIONARIOS[idioma];
   if (!textos) return;
 
-  // Traducir todos los elementos con la propiedad data-i18n
   document.querySelectorAll("[data-i18n]").forEach(elemento => {
     const clave = elemento.getAttribute("data-i18n");
     if (textos[clave] !== undefined) {
@@ -129,11 +128,8 @@ function aplicarIdioma(idioma) {
     }
   });
 
-  // Cambiar el atributo lang en la etiqueta html para accesibilidad
   document.documentElement.lang = idioma;
   idiomaActual = idioma;
-
-  // Actualizar el estado visual del botón (ES / EN)
   actualizarBotonIdioma();
 }
 
@@ -143,18 +139,27 @@ function cambiarIdioma() {
 }
 
 function actualizarBotonIdioma() {
+  const btnEs = document.querySelector(".idioma-activo, .idioma-inactivo");
   const btn = document.getElementById("btn-idioma");
+  
   if (!btn) return;
 
-  if (idiomaActual === "es") {
-    btn.innerHTML = `<span class="idioma-activo">ES</span><span class="idioma-sep">/</span><span class="idioma-inactivo">EN</span>`;
-  } else {
-    btn.innerHTML = `<span class="idioma-inactivo">ES</span><span class="idioma-sep">/</span><span class="idioma-activo">EN</span>`;
+  const spanEs = btn.querySelector("span:nth-child(1)");
+  const spanEn = btn.querySelector("span:nth-child(3)");
+
+  if (spanEs && spanEn) {
+    if (idiomaActual === "es") {
+      spanEs.className = "idioma-activo";
+      spanEn.className = "idioma-inactivo";
+    } else {
+      spanEs.className = "idioma-inactivo";
+      spanEn.className = "idioma-activo";
+    }
   }
 }
 
 /* ------------------------------------------------------------
-   3. MENÚ RESPONSIVO
+   3. MENÚ RESPONSIVO Y NAVEGACIÓN
    ------------------------------------------------------------ */
 let menuVisible = false;
 
